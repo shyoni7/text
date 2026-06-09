@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>כיתת פיננסים | חינוך פיננסי ויזמות לעולמות המחר — סילבוס ותכנית לימודים</title>
-<meta name="description" content="תכנית חינוך פיננסי חדשנית לחטיבות הביניים ולחטיבה העליונה. 30 מפגשים, 60 שעות, אוריינות פיננסית חווייתית: ניהול תקציב, השקעות, שוק ההון, קריפטו ויזמות. הזמינו קורס, מפגש או הרצאה." />
-<meta property="og:title" content="כיתת פיננסים — חינוך פיננסי ויזמות לעולמות המחר" />
-<meta property="og:description" content="תכנית חינוך פיננסי חווייתית לבתי ספר — סילבוס מלא, מערכי שיעור והזמנת קורס." />
+<title>התכנית להשכלה ויזמות פיננסית בעולמות המחר | תת-סל 60414 — סילבוס, מערכי שיעור ומחירון</title>
+<meta name="description" content="התכנית להשכלה ויזמות פיננסית בעולמות המחר — תכנית תת-סל מאושרת מס׳ 60414 לחט״ב ולחטיבה העליונה. 30 מפגשים, 60 שעות, אוריינות פיננסית חווייתית: ניהול תקציב, השקעות, שוק ההון, קריפטו ויזמות. סילבוס, מערכי שיעור ומחירון רשמי." />
+<meta property="og:title" content="התכנית להשכלה ויזמות פיננסית בעולמות המחר — תת-סל 60414" />
+<meta property="og:description" content="תכנית חינוך פיננסי חווייתית לבתי ספר — תת-סל מס׳ 60414. סילבוס מלא, מערכי שיעור, מחירון רשמי והזמנה." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -111,7 +111,8 @@
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:90px 0 100px}
   .hero h1{font-size:clamp(2.1rem,5vw,3.7rem);font-weight:900;line-height:1.1;letter-spacing:-.02em}
   .hero h1 .hl{background:linear-gradient(120deg,#9ef0a8,#6cf0d6);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p.sub{font-size:clamp(1.05rem,1.9vw,1.3rem);color:#cdfff3;margin:22px 0 30px;max-width:54ch}
+  .hero p.progname{font-size:clamp(1.02rem,1.7vw,1.22rem);font-weight:700;color:#9ef0a8;margin:16px 0 0;letter-spacing:-.01em}
+  .hero p.sub{font-size:clamp(1.05rem,1.9vw,1.3rem);color:#cdfff3;margin:12px 0 30px;max-width:54ch}
   .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
   .hero-badges span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);padding:8px 15px;border-radius:999px;font-weight:600;font-size:.9rem;backdrop-filter:blur(4px)}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
@@ -180,6 +181,14 @@
 
   /* ---------- VALUES band ---------- */
   .band{background:var(--grad-mint);border-block:1px solid rgba(15,163,168,.12)}
+
+  /* ---------- quote ---------- */
+  .measure-quote{
+    max-width:80ch;margin:30px auto 0;background:#fff;border-radius:var(--radius);
+    padding:28px 32px;border:1px solid rgba(15,163,168,.14);box-shadow:var(--shadow-sm);
+    border-inline-start:5px solid var(--teal-500);color:var(--ink-soft);font-size:1.05rem;line-height:1.85;
+  }
+  .measure-quote b{color:var(--teal-800)}
 
   /* ---------- SYLLABUS ---------- */
   .syl-controls{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px 0 36px}
@@ -269,6 +278,43 @@
   .contact-side .ci-row b{display:block}
   .contact-side .ci-row span{color:var(--ink-soft);font-size:.95rem}
 
+  /* ---------- SPEC GRID (official details) ---------- */
+  .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  .spec{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid rgba(15,163,168,.14);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow-sm)}
+  .spec .si{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:var(--grad-mint);color:var(--teal-700);display:grid;place-items:center;font-size:1.1rem}
+  .spec .sl{font-size:.8rem;color:var(--ink-soft);font-weight:700}
+  .spec .sv{font-weight:700;color:var(--ink)}
+  @media(max-width:880px){.spec-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.spec-grid{grid-template-columns:1fr}}
+
+  /* ---------- PRICE LIST (official) ---------- */
+  .pricelist{
+    margin-top:34px;background:#fff;color:var(--ink);border-radius:var(--radius);
+    box-shadow:0 30px 60px -25px rgba(0,0,0,.5);overflow:hidden;
+  }
+  .pricelist .pl-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:20px 26px;background:var(--grad-mint);border-bottom:1px solid rgba(15,163,168,.16)}
+  .pricelist .pl-head h3{font-size:1.18rem;color:var(--teal-800)}
+  .pricelist .pl-head .tag60{background:var(--grad-btn);color:#053b3f;font-weight:800;font-size:.82rem;padding:6px 14px;border-radius:999px}
+  table.pl{width:100%;border-collapse:collapse;font-size:1rem}
+  table.pl th,table.pl td{padding:14px 26px;text-align:start}
+  table.pl thead th{font-size:.82rem;color:var(--ink-soft);font-weight:700;background:#f3fcfb;border-bottom:1px solid rgba(15,163,168,.14)}
+  table.pl tbody tr{border-bottom:1px solid rgba(15,163,168,.08)}
+  table.pl tbody tr:last-child{border-bottom:none}
+  table.pl tbody tr:hover{background:var(--bg-2)}
+  table.pl td.item{font-weight:700}
+  table.pl td.rate{font-weight:900;color:var(--teal-700);white-space:nowrap;font-size:1.08rem}
+  table.pl td.unit{color:var(--ink-soft);font-size:.9rem}
+  .pl-note{padding:16px 26px;background:#f3fcfb;color:var(--ink-soft);font-size:.86rem;border-top:1px solid rgba(15,163,168,.12)}
+  .order-note{
+    margin-top:26px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);
+    border-radius:18px;padding:20px 24px;color:#eafffb;display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:center;text-align:center;font-weight:600
+  }
+  .order-note b{color:#9ef0a8;font-size:1.15rem}
+  @media(max-width:600px){
+    table.pl th,table.pl td,.pricelist .pl-head,.pl-note{padding-inline:16px}
+    table.pl td.unit{display:none}
+  }
+
   /* ---------- FAQ ---------- */
   .faq details{background:#fff;border:1px solid rgba(15,163,168,.14);border-radius:15px;margin-bottom:12px;box-shadow:var(--shadow-sm)}
   .faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:800;display:flex;justify-content:space-between;align-items:center;gap:14px}
@@ -335,10 +381,10 @@
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand" aria-label="כיתת פיננסים">
+    <a href="#top" class="brand" aria-label="התכנית להשכלה ויזמות פיננסית בעולמות המחר">
       <span class="logo">₪</span>
-      <span>כיתת פיננסים
-        <small>חינוך פיננסי ויזמות לעולמות המחר</small>
+      <span>פיננסים לעולמות המחר
+        <small>השכלה ויזמות פיננסית · תת-סל 60414</small>
       </span>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -347,7 +393,8 @@
       <a href="#method">דרכי הוראה</a>
       <a href="#syllabus">סילבוס ומערכי שיעור</a>
       <a href="#teacher">המרצה</a>
-      <a href="#order">הזמנת קורס</a>
+      <a href="#details">תת-סל 60414</a>
+      <a href="#order">מחירון והזמנה</a>
     </nav>
     <div class="nav-cta">
       <a href="#order" class="btn btn-ghost">הזמינו מפגש</a>
@@ -363,12 +410,13 @@
   <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)">🚀 תכנית חדשנית לחטיבות הביניים ולחטיבה העליונה</span>
+      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)">✅ תכנית מאושרת בתת-סל · מס׳ 60414</span>
       <h1>נותנים לתלמידים<br><span class="hl">כלים פיננסיים לחיים</span></h1>
+      <p class="progname">התכנית להשכלה ויזמות פיננסית בעולמות המחר</p>
       <p class="sub">תכנית חינוך פיננסי חווייתית ומעשית — מהבנת ערך הכסף ועד שוק ההון, קריפטו ויזמות. לומדים דרך משחקים, סימולציות וכלים טכנולוגיים, ויוצאים עם ביטחון, אחריות ועצמאות כלכלית.</p>
       <div class="hero-badges">
         <span>📚 30 מפגשים · 60 שעות</span>
-        <span>🎓 כיתות ט'–י"א</span>
+        <span>🎓 חט״ב ועליונה</span>
         <span>🧩 למידה חווייתית</span>
         <span>🏁 פרויקט גמר</span>
       </div>
@@ -503,10 +551,10 @@
 <!-- ============ TRUST STRIP ============ -->
 <div class="trust">
   <div class="wrap">
+    <span><span class="dot"></span>תכנית <b>תת-סל מאושרת · מס׳ 60414</b></span>
     <span><span class="dot"></span>מפותח על ידי מנהל ומורה עם <b>15+ שנות ניסיון</b></span>
-    <span><span class="dot"></span>תואר במנהל עסקים · הוראה בחינוך מיוחד</span>
-    <span><span class="dot"></span>מבנה <b>מודולרי</b> — קורס מלא, יחידה או הרצאה בודדת</span>
-    <span><span class="dot"></span>מותאם לתכנית <b>תת-סל / חינוך פיננסי</b></span>
+    <span><span class="dot"></span>פרונטלי ומקוון · רגיל ומיוחד · כל המחוזות</span>
+    <span><span class="dot"></span>מבנה <b>מודולרי</b> — קורס מלא, סדנה או הרצאה</span>
   </div>
 </div>
 
@@ -636,14 +684,42 @@
 <section class="section-pad">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">📈 מדדי הצלחה</span>
-      <h2 class="title">איך נדע שזה עובד</h2>
-      <p class="lead mx-auto mt16">הערכה כפולה — פיננסית ומעשית — שבוחנת גם את הידע וגם את היכולת ליישם אותו בעולם האמיתי.</p>
+      <span class="eyebrow">📈 מדד התוצאה</span>
+      <h2 class="title">איך נדע שזה עובד — מדד כפול</h2>
+      <p class="lead mx-auto mt16">הערכה כפולה — פיננסית ופיסקלית — שבוחנת גם את הידע וגם את המוכנות ליישום בעולם האמיתי.</p>
     </div>
+    <blockquote class="measure-quote reveal">
+      מדד התוצאה שלנו יהיה כפול. <b>ברמה הפיננסית</b> התלמידים יצטרכו לבנות תקציב (גם משפחתי וגם לעסק — שנקרא דוח רווח והפסד), להכיר את המשמעות של מושגי מפתח מהעולם הפיננסי ולהסביר אותם בצורה נהירה וברורה. <b>ברמה הפיסקלית</b> הם יצטרכו לבנות תוכנית פיננסית אסטרטגית לניהול השקעות ולהציג אותה מול הכיתה / מול "משקיעים" שייתנו להם ציון — הן על התוכן, הן על רמת ההצגה, הביטחון העצמי ועוד. באמצעות שני מדדים אלו אנו נבחן הן את האוריינות הפיננסית שהתכנית רוצה להקנות, והן את המוכנות ליישום הידע בעולם האמיתי — כשהתלמידים יתמודדו עם האתגר שבהצגת מצגת מול קהל, קבלת ביקורת בונה והתאמת החומר הנלמד למציאות המעשית מחוץ לכיתה.
+    </blockquote>
     <div class="grid g3 mt32">
-      <div class="card reveal"><div class="ico">🧾</div><h3>בניית תקציב</h3><p>כל תלמיד בונה תקציב משפחתי ותקציב לעסק (דוח רווח והפסד) ומסביר מושגי מפתח בצורה ברורה.</p></div>
-      <div class="card reveal"><div class="ico">💼</div><h3>תכנית השקעות</h3><p>בניית אסטרטגיית השקעות והצגתה מול "משקיעים" — ציון על התוכן, ההצגה והביטחון העצמי.</p></div>
-      <div class="card reveal"><div class="ico">📊</div><h3>מדדים כמותיים ואיכותניים</h3><p>השתתפות מעל 80%, שאלוני ידע לפני ואחרי, רמת מעורבות בדיונים ושימוש נכון במונחים פיננסיים.</p></div>
+      <div class="card reveal"><div class="ico">🧾</div><h3>ברמה הפיננסית</h3><p>בניית תקציב משפחתי ותקציב לעסק (דוח רווח והפסד), והסבר ברור של מושגי מפתח מהעולם הפיננסי.</p></div>
+      <div class="card reveal"><div class="ico">💼</div><h3>ברמה הפיסקלית</h3><p>בניית תוכנית השקעות אסטרטגית והצגתה מול "משקיעים" — ציון על התוכן, ההצגה והביטחון העצמי.</p></div>
+      <div class="card reveal"><div class="ico">📊</div><h3>מדדים תומכים</h3><p>השתתפות מעל 80%, שאלוני ידע לפני ואחרי, מעורבות בדיונים ושימוש נכון במונחים פיננסיים.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFICIAL DETAILS ============ -->
+<section class="band section-pad" id="details">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">📋 פרטי התכנית במערכת תת-הסל</span>
+      <h2 class="title">תכנית מאושרת ומוכנה להזמנה</h2>
+      <p class="lead mx-auto mt16">כל מה שמנהל/ת ורכז/ת צריכים לדעת במבט אחד — מתוך כרטיס התכנית הרשמי במערכת תת-הסל.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec reveal"><span class="si">🔢</span><div><div class="sl">מספר תכנית</div><div class="sv">60414</div></div></div>
+      <div class="spec reveal"><span class="si">📚</span><div><div class="sl">נושא · תחום</div><div class="sv">כלכלה · לימודי</div></div></div>
+      <div class="spec reveal"><span class="si">🎓</span><div><div class="sl">אוכלוסיית יעד</div><div class="sv">חט״ב ועליונה</div></div></div>
+      <div class="spec reveal"><span class="si">🔁</span><div><div class="sl">סוג הפעילות</div><div class="sv">מתמשכת</div></div></div>
+      <div class="spec reveal"><span class="si">💻</span><div><div class="sl">אופן העברה</div><div class="sv">פרונטלי ומקוון</div></div></div>
+      <div class="spec reveal"><span class="si">🏫</span><div><div class="sl">סוג חינוך</div><div class="sv">רגיל ומיוחד</div></div></div>
+      <div class="spec reveal"><span class="si">🛡️</span><div><div class="sl">סוג פיקוח</div><div class="sv">ממלכתי · ממלכתי-דתי</div></div></div>
+      <div class="spec reveal"><span class="si">🌍</span><div><div class="sl">מגזרים</div><div class="sv">יהודי · ערבי · דרוזי</div></div></div>
+      <div class="spec reveal"><span class="si">🗺️</span><div><div class="sl">פריסה גאוגרפית</div><div class="sv">כל המחוזות</div></div></div>
+      <div class="spec reveal"><span class="si">🚨</span><div><div class="sl">התאמה לחירום</div><div class="sv">כן</div></div></div>
+      <div class="spec reveal"><span class="si">🧠</span><div><div class="sl">מיומנויות</div><div class="sv">חשיבה ביקורתית · אוריינות מידע</div></div></div>
+      <div class="spec reveal"><span class="si">🏷️</span><div><div class="sl">מקור תכנית</div><div class="sv">חיצוני · מגזר עסקי</div></div></div>
     </div>
   </div>
 </section>
@@ -652,10 +728,11 @@
 <section class="pricing section-pad" id="order">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)">🛒 הזמנת קורס</span>
-      <h2 class="title">בחרו את הפורמט שמתאים לבית הספר</h2>
-      <p class="lead mx-auto mt16" style="color:#cdfff3">מהרצאת היכרות בודדת ועד תכנית שנתית מלאה — אפשר להתאים את ההיקף, הגילאים והדגשים. צרו קשר לקבלת הצעה ותיאום.</p>
+      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)">🛒 הזמנה ומחירון</span>
+      <h2 class="title">הזמינו את התכנית לבית הספר</h2>
+      <p class="lead mx-auto mt16" style="color:#cdfff3">מהרצאת היכרות בודדת ועד תכנית שנתית מלאה — אפשר להתאים את ההיקף, הגילאים והדגשים. ההזמנה מתבצעת דרך מערכת תת-הסל לפי מספר התכנית.</p>
     </div>
+
     <div class="price-grid">
       <div class="price-card reveal">
         <h3>הרצאה / מפגש בודד</h3>
@@ -676,13 +753,13 @@
           <li>16 יחידות תוכן ליבה + פרויקט גמר</li>
           <li>כלים טכנולוגיים ועוזר AI</li>
           <li>מדדי הערכה ושאלוני ידע</li>
-          <li>מותאם לתת-סל / חינוך פיננסי</li>
+          <li>תכנית תת-סל מאושרת · מס׳ 60414</li>
           <li>הצגת פרויקטים מול מנהלים ומורים</li>
         </ul>
         <a href="#contact" class="btn btn-primary">קבלו הצעה לבית הספר</a>
       </div>
       <div class="price-card reveal">
-        <h3>יחידה / מודול נבחר</h3>
+        <h3>סדנה / מודול נבחר</h3>
         <div class="price">סדרת מפגשים בנושא</div>
         <ul>
           <li>למשל: שוק ההון · קריפטו · תקציב</li>
@@ -690,8 +767,34 @@
           <li>שילוב בתכנית קיימת</li>
           <li>אפשרות להשתלמות צוות מורים</li>
         </ul>
-        <a href="#contact" class="btn btn-white">לתיאום מודול</a>
+        <a href="#contact" class="btn btn-white">לתיאום סדנה</a>
       </div>
+    </div>
+
+    <div class="pricelist reveal">
+      <div class="pl-head">
+        <h3>מחירון רשמי — לפי מערכת תת-הסל</h3>
+        <span class="tag60">תכנית מס׳ 60414</span>
+      </div>
+      <table class="pl">
+        <thead>
+          <tr><th>סוג פריט</th><th>עלות לשעה (כולל מע״מ)</th><th class="unit">אופן תמחור</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">סדנה — כולל חומרי פעילות</td><td class="rate">₪640</td><td class="unit">קבוע · לשעה</td></tr>
+          <tr><td class="item">סדנה — כולל תוכן דיגיטלי</td><td class="rate">₪640</td><td class="unit">קבוע · לשעה</td></tr>
+          <tr><td class="item">סדנה — ללא חומרי פעילות</td><td class="rate">₪427</td><td class="unit">קבוע · לשעה</td></tr>
+          <tr><td class="item">הרצאה</td><td class="rate">₪341</td><td class="unit">קבוע · לשעה</td></tr>
+          <tr><td class="item">ייעוץ פרטני או מצומצם</td><td class="rate">₪272</td><td class="unit">קבוע · לשעה</td></tr>
+          <tr><td class="item">התערבות טיפולית-פרטנית</td><td class="rate">₪213</td><td class="unit">קבוע · לשעה</td></tr>
+          <tr><td class="item">נסיעות לנותן שירות</td><td class="rate">₪1</td><td class="unit">קבוע · לשעה</td></tr>
+        </tbody>
+      </table>
+      <div class="pl-note">המחירים נקובים לשעת פעילות וכוללים מע״מ, על פי מחירון הספק במערכת תת-הסל. התכנית המלאה בנויה מ-30 מפגשים בני 3 שעות (60 שעות לימוד).</div>
+    </div>
+
+    <div class="order-note reveal">
+      <span>📋 להזמנה דרך מערכת תת-הסל — חפשו את תכנית מס׳</span> <b>60414</b> <span>· "התכנית להשכלה ויזמות פיננסית בעולמות המחר"</span>
     </div>
   </div>
 </section>
@@ -760,6 +863,7 @@
       <details><summary>לאילו גילאים מתאימה התכנית?<span class="pm">+</span></summary><div class="ans">התכנית מיועדת לעל-יסודי — חטיבות ביניים וחטיבה עליונה, בדגש על כיתות ט'–י"א. התכנים מותאמים גם למסגרות רגילות וגם לחינוך מיוחד.</div></details>
       <details><summary>מה היקף התכנית המלאה?<span class="pm">+</span></summary><div class="ans">30 מפגשים בני שלוש שעות כל אחד — סך הכול 60 שעות לימוד, בבנייה הדרגתית שבה כל מפגש מוסיף נדבך נוסף ועד לפרויקט גמר.</div></details>
       <details><summary>אפשר להזמין רק חלק מהנושאים?<span class="pm">+</span></summary><div class="ans">בהחלט. המבנה מודולרי — אפשר להזמין את הקורס המלא, יחידה נבחרת (למשל שוק ההון או קריפטו), הרצאה בודדת או השתלמות לצוות המורים.</div></details>
+      <details><summary>איך מזמינים את התכנית וכמה היא עולה?<span class="pm">+</span></summary><div class="ans">ההזמנה מתבצעת דרך מערכת תת-הסל לפי מספר התכנית — <b>60414</b>. התמחור הוא לפי שעת פעילות וכולל מע״מ: סדנה ₪640 / ₪427 לשעה, הרצאה ₪341 לשעה, ייעוץ ₪272 והתערבות פרטנית ₪213 לשעה (ראו מחירון מלא בסעיף "מחירון והזמנה"). אפשר גם לפנות אליי ישירות לקבלת הצעה מותאמת.</div></details>
       <details><summary>איך נמדדת ההצלחה של התכנית?<span class="pm">+</span></summary><div class="ans">בשני מישורים: בניית תקציב ודוח רווח והפסד, והצגת תכנית השקעות מול "משקיעים". לצד זאת מדדים כמותיים כמו שיעור השתתפות מעל 80% ושאלוני ידע לפני ואחרי.</div></details>
       <details><summary>האם נדרשים כלים טכנולוגיים מיוחדים?<span class="pm">+</span></summary><div class="ans">התכנית משלבת תוכנה ייעודית לניהול תקציב והשקעות וירטואליות ועוזר AI פיננסי, אך גמישה ומותאמת לתשתיות הקיימות בבית הספר.</div></details>
     </div>
@@ -783,14 +887,16 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <div class="brand" style="color:#eafffb"><span class="logo">₪</span><span>כיתת פיננסים<small style="color:#7fc6bb">חינוך פיננסי ויזמות לעולמות המחר</small></span></div>
-        <p style="margin-top:14px;max-width:42ch">תכנית חינוך פיננסי חווייתית לבתי ספר — מקנה לתלמידים אוריינות פיננסית, אחריות ועצמאות כלכלית לקראת החיים הבוגרים.</p>
+        <div class="brand" style="color:#eafffb"><span class="logo">₪</span><span>פיננסים לעולמות המחר<small style="color:#7fc6bb">השכלה ויזמות פיננסית · תת-סל 60414</small></span></div>
+        <p style="margin-top:14px;max-width:42ch">התכנית להשכלה ויזמות פיננסית בעולמות המחר — תכנית חווייתית לבתי ספר המקנה לתלמידים אוריינות פיננסית, אחריות ועצמאות כלכלית לקראת החיים הבוגרים.</p>
       </div>
       <div>
         <h4>ניווט</h4>
         <a href="#about">על התכנית</a>
         <a href="#audience">למי מתאים</a>
         <a href="#syllabus">סילבוס ומערכי שיעור</a>
+        <a href="#details">פרטי תת-סל 60414</a>
+        <a href="#order">מחירון והזמנה</a>
         <a href="#teacher">המרצה</a>
       </div>
       <div>
@@ -801,7 +907,7 @@
         <a href="#contact">טופס בקשה להצעה</a>
       </div>
     </div>
-    <div class="copy">© <span id="yr"></span> כיתת פיננסים · יהונתן השלי — חינוך פיננסי ויזמות לעולמות המחר. כל הזכויות שמורות.</div>
+    <div class="copy">© <span id="yr"></span> יהונתן השלי · התכנית להשכלה ויזמות פיננסית בעולמות המחר — תת-סל מס׳ 60414. כל הזכויות שמורות.</div>
   </div>
 </footer>
 
