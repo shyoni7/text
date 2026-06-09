@@ -126,6 +126,29 @@
   .stat .lbl{font-size:.82rem;color:#d6fff5;margin-top:6px}
   .hero-wave{display:block;width:100%;height:auto;position:relative;z-index:2;margin-bottom:-6px}
 
+  /* ---------- HERO ART (futuristic finance + AI classroom) ---------- */
+  .hero-art{position:relative;width:100%}
+  .hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 28px 55px rgba(0,4,10,.45))}
+  .art-chip{
+    position:absolute;display:flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+    backdrop-filter:blur(8px);padding:9px 14px;border-radius:14px;
+    font-weight:700;font-size:.86rem;color:#eafffb;box-shadow:0 12px 30px -12px rgba(0,0,0,.55);white-space:nowrap;
+  }
+  .art-chip b{color:#9ef0a8}
+  .art-chip.c1{top:5%;inset-inline-start:-5%;animation:bob 6s ease-in-out infinite}
+  .art-chip.c2{bottom:20%;inset-inline-end:-5%;animation:bob 7s ease-in-out infinite .6s}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  .art-stats{
+    display:flex;gap:10px;margin-top:16px;
+  }
+  .art-stats .s{
+    flex:1;text-align:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+    border-radius:14px;padding:12px 8px;backdrop-filter:blur(6px);
+  }
+  .art-stats .s b{display:block;font-size:1.5rem;font-weight:900;color:#9ef0a8;line-height:1}
+  .art-stats .s span{font-size:.76rem;color:#d6fff5}
+
   /* ---------- TRUST STRIP ---------- */
   .trust{background:#fff;border-bottom:1px solid rgba(15,163,168,.1)}
   .trust .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:center;align-items:center;padding:22px;color:var(--ink-soft);font-weight:600}
@@ -354,16 +377,121 @@
         <a href="#syllabus" class="btn btn-white">צפו בסילבוס המלא</a>
       </div>
     </div>
-    <div class="hero-card">
-      <h3>✨ תכנית במבט מהיר</h3>
-      <div class="stat-row">
-        <div class="stat"><div class="num">30</div><div class="lbl">מפגשים בני 3 שעות</div></div>
-        <div class="stat"><div class="num">60</div><div class="lbl">שעות לימוד אקדמיות</div></div>
-        <div class="stat"><div class="num">16</div><div class="lbl">יחידות תוכן ליבה</div></div>
-        <div class="stat"><div class="num">100%</div><div class="lbl">מעשי וחווייתי</div></div>
+    <div>
+      <div class="hero-art">
+        <span class="art-chip c1">🤖 <span>AI&nbsp;+&nbsp;סימולציות</span></span>
+        <span class="art-chip c2">📈 <b>+24%</b>&nbsp;תשואה וירטואלית</span>
+        <svg viewBox="0 0 560 500" role="img" aria-label="תלמידים לומדים פיננסים ובינה מלאכותית בכיתה עתידנית מול לוח נתונים חכם">
+          <defs>
+            <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0b4f57"/><stop offset="1" stop-color="#06343a"/>
+            </linearGradient>
+            <linearGradient id="studentGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0a5b63"/><stop offset="1" stop-color="#052b30"/>
+            </linearGradient>
+            <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0e6b72"/><stop offset="1" stop-color="#063138"/>
+            </linearGradient>
+            <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+              <stop offset="0" stop-color="#3ed99a" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#3ed99a" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#34dcc9" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#34dcc9" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="2.4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- ambient glow -->
+          <ellipse cx="280" cy="175" rx="265" ry="160" fill="url(#glow)"/>
+
+          <!-- smart board / dashboard -->
+          <g>
+            <rect x="46" y="28" width="468" height="278" rx="20" fill="url(#screenGrad)" stroke="#6cf0d6" stroke-opacity=".55" stroke-width="1.6"/>
+            <!-- header bar -->
+            <line x1="46" y1="62" x2="514" y2="62" stroke="#6cf0d6" stroke-opacity=".22" stroke-width="1"/>
+            <circle cx="68" cy="45" r="4" fill="#fb7185"/><circle cx="84" cy="45" r="4" fill="#fbbf24"/><circle cx="100" cy="45" r="4" fill="#34d399"/>
+            <rect x="250" y="38" width="60" height="16" rx="8" fill="#19c4c2" fill-opacity=".25" stroke="#6cf0d6" stroke-opacity=".5"/>
+            <text x="280" y="50" text-anchor="middle" font-family="Rubik,Arial" font-size="10" font-weight="700" fill="#9ef0a8" letter-spacing="1">AI · FIN</text>
+
+            <!-- candlestick chart -->
+            <g stroke-linecap="round">
+              <g stroke="#34d399"><line x1="116" y1="138" x2="116" y2="178"/><line x1="164" y1="118" x2="164" y2="160"/><line x1="188" y1="108" x2="188" y2="150"/><line x1="236" y1="90" x2="236" y2="130"/><line x1="260" y1="82" x2="260" y2="120"/></g>
+              <g stroke="#fb7185"><line x1="92" y1="150" x2="92" y2="195"/><line x1="140" y1="132" x2="140" y2="172"/><line x1="212" y1="104" x2="212" y2="142"/></g>
+              <g fill="#34d399"><rect x="109" y="150" width="14" height="22" rx="2"/><rect x="157" y="128" width="14" height="24" rx="2"/><rect x="181" y="116" width="14" height="24" rx="2"/><rect x="229" y="100" width="14" height="22" rx="2"/><rect x="253" y="90" width="14" height="20" rx="2"/></g>
+              <g fill="#fb7185"><rect x="85" y="162" width="14" height="26" rx="2"/><rect x="133" y="146" width="14" height="19" rx="2"/><rect x="205" y="118" width="14" height="16" rx="2"/></g>
+            </g>
+            <!-- trend line -->
+            <polyline points="92,175 116,161 140,155 164,140 188,128 212,126 236,111 260,100" fill="none" stroke="#6cf0d6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)"/>
+
+            <!-- secondary sparkline + area -->
+            <path d="M70,266 L96,258 L122,262 L148,250 L174,255 L200,244 L226,250 L252,239 L278,246 L300,234 L300,286 L70,286 Z" fill="url(#areaFill)"/>
+            <polyline points="70,266 96,258 122,262 148,250 174,255 200,244 226,250 252,239 278,246 300,234" fill="none" stroke="#34dcc9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- AI node network -->
+            <g stroke="#6cf0d6" stroke-opacity=".5" stroke-width="1.4">
+              <line x1="408" y1="150" x2="356" y2="108"/><line x1="408" y1="150" x2="366" y2="198"/>
+              <line x1="408" y1="150" x2="452" y2="106"/><line x1="408" y1="150" x2="466" y2="172"/>
+              <line x1="408" y1="150" x2="426" y2="214"/><line x1="408" y1="150" x2="350" y2="160"/>
+            </g>
+            <g fill="#19c4c2">
+              <circle cx="356" cy="108" r="7"/><circle cx="366" cy="198" r="7"/><circle cx="452" cy="106" r="7"/>
+              <circle cx="466" cy="172" r="7"/><circle cx="426" cy="214" r="7"/><circle cx="350" cy="160" r="7"/>
+            </g>
+            <circle cx="408" cy="150" r="21" fill="#3ed99a">
+              <animate attributeName="r" values="21;23;21" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <text x="408" y="155" text-anchor="middle" font-family="Rubik,Arial" font-size="13" font-weight="800" fill="#053b3f">AI</text>
+
+            <!-- mini data rows -->
+            <g fill="#6cf0d6" fill-opacity=".3">
+              <rect x="338" y="244" width="150" height="6" rx="3"/><rect x="338" y="258" width="120" height="6" rx="3"/><rect x="338" y="272" width="140" height="6" rx="3"/>
+            </g>
+          </g>
+
+          <!-- sparkles -->
+          <g fill="#9ef0a8">
+            <path d="M30,120 l3,7 7,3 -7,3 -3,7 -3,-7 -7,-3 7,-3 Z"/>
+            <path d="M520,210 l2.5,6 6,2.5 -6,2.5 -2.5,6 -2.5,-6 -6,-2.5 6,-2.5 Z" opacity=".8"/>
+          </g>
+
+          <!-- desk -->
+          <rect x="14" y="452" width="532" height="22" rx="11" fill="url(#deskGrad)"/>
+          <rect x="14" y="452" width="532" height="6" rx="3" fill="#6cf0d6" fill-opacity=".25"/>
+
+          <!-- students (back view, facing the board) -->
+          <g>
+            <!-- left -->
+            <path d="M102,452 C102,414 120,406 150,406 C180,406 198,414 198,452 Z" fill="url(#studentGrad)"/>
+            <circle cx="150" cy="380" r="24" fill="url(#studentGrad)"/>
+            <path d="M126,388 a24,24 0 0 1 48,0" fill="none" stroke="#6cf0d6" stroke-opacity=".25" stroke-width="2"/>
+            <!-- center (closest) -->
+            <path d="M228,452 C228,410 250,400 280,400 C310,400 332,410 332,452 Z" fill="url(#studentGrad)"/>
+            <circle cx="280" cy="372" r="28" fill="url(#studentGrad)"/>
+            <path d="M252,381 a28,28 0 0 1 56,0" fill="none" stroke="#6cf0d6" stroke-opacity=".3" stroke-width="2"/>
+            <!-- right -->
+            <path d="M368,452 C368,416 385,408 415,408 C445,408 462,416 462,452 Z" fill="url(#studentGrad)"/>
+            <circle cx="415" cy="382" r="23" fill="url(#studentGrad)"/>
+            <path d="M392,390 a23,23 0 0 1 46,0" fill="none" stroke="#6cf0d6" stroke-opacity=".25" stroke-width="2"/>
+          </g>
+
+          <!-- glowing tablets on the desk -->
+          <g>
+            <rect x="118" y="432" width="40" height="22" rx="3" fill="#0a5b63" stroke="#34dcc9" stroke-opacity=".7"/>
+            <rect x="124" y="437" width="28" height="3" rx="1.5" fill="#6cf0d6" fill-opacity=".8"/>
+            <rect x="402" y="434" width="40" height="22" rx="3" fill="#0a5b63" stroke="#34dcc9" stroke-opacity=".7"/>
+            <rect x="408" y="439" width="28" height="3" rx="1.5" fill="#6cf0d6" fill-opacity=".8"/>
+          </g>
+        </svg>
       </div>
-      <div style="margin-top:18px;font-size:.92rem;color:#d6fff5;line-height:1.6">
-        מותאם להוראה במסגרות רגילות ובחינוך מיוחד · משלב תוכנה לניהול תקציב והשקעות וירטואליות · עוזר AI לשאלות פיננסיות.
+      <div class="art-stats">
+        <div class="s"><b>30</b><span>מפגשים</span></div>
+        <div class="s"><b>60</b><span>שעות לימוד</span></div>
+        <div class="s"><b>16</b><span>יחידות + פרויקט</span></div>
       </div>
     </div>
   </div>
