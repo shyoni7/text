@@ -101,46 +101,46 @@
   .hamburger{display:none;background:none;border:none;cursor:pointer;width:42px;height:42px;border-radius:11px}
   .hamburger span{display:block;width:22px;height:2.5px;background:var(--teal-800);margin:4px auto;border-radius:3px;transition:.3s}
 
-  /* ---------- HERO ---------- */
-  .hero{position:relative;color:#eafffb;overflow:hidden;background:var(--grad-hero)}
-  .hero .blob{position:absolute;border-radius:50%;filter:blur(54px);opacity:.32;pointer-events:none;z-index:1}
+  /* ---------- HERO (dark cinematic) ---------- */
+  .hero{position:relative;color:#eafffb;overflow:hidden;
+    background:radial-gradient(85% 80% at 50% 30%, #08363c 0%, #052529 52%, #02161a 100%)}
+  .hero .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.22;pointer-events:none;z-index:1;mix-blend-mode:screen}
   .hero .b1{width:460px;height:460px;background:#3ed99a;top:-180px;left:-140px;animation:float1 14s ease-in-out infinite}
   .hero .b2{width:400px;height:400px;background:#19c4c2;bottom:-200px;right:-120px;animation:float2 17s ease-in-out infinite}
   .hero .b3{display:none}
   @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,40px)}}
   @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,-30px)}}
 
-  /* ---------- HERO depth scene (CSS+SVG faux-3D, brand colors) ---------- */
+  /* ---------- HERO depth scene (CSS+SVG faux-3D) ---------- */
   .hero-scene{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-  .hero-stars{position:absolute;inset:0;opacity:.7;transform:translate(var(--sx,0),var(--sy,0));transition:transform .25s ease-out;
+  .hero-halo{position:absolute;inset:0;mix-blend-mode:screen;transform:translate(var(--gx,0),var(--gy,0));transition:transform .3s ease-out;
+    background:radial-gradient(42% 34% at 50% 12%, rgba(158,240,168,.5), rgba(52,220,201,.16) 45%, transparent 72%)}
+  .hero-stars{position:absolute;inset:0;opacity:.8;transform:translate(var(--sx,0),var(--sy,0));transition:transform .3s ease-out;
     background-image:
-      radial-gradient(1.6px 1.6px at 12% 26%, rgba(255,255,255,.85), transparent),
-      radial-gradient(1.4px 1.4px at 78% 16%, rgba(214,255,245,.7), transparent),
-      radial-gradient(1.3px 1.3px at 62% 34%, rgba(255,255,255,.7), transparent),
-      radial-gradient(1.7px 1.7px at 30% 12%, rgba(255,255,255,.65), transparent),
-      radial-gradient(1.3px 1.3px at 88% 40%, rgba(214,255,245,.6), transparent),
-      radial-gradient(1.4px 1.4px at 45% 20%, rgba(255,255,255,.6), transparent),
-      radial-gradient(1.2px 1.2px at 20% 44%, rgba(214,255,245,.5), transparent),
-      radial-gradient(1.2px 1.2px at 70% 48%, rgba(255,255,255,.45), transparent)}
-  .hero-glow{position:absolute;inset:0;mix-blend-mode:screen;transform:translate(var(--gx,0),var(--gy,0));transition:transform .25s ease-out;
-    background:
-      radial-gradient(58% 38% at 50% 72%, rgba(158,240,168,.55), rgba(52,220,201,.16) 48%, transparent 72%),
-      radial-gradient(120% 60% at 50% 100%, rgba(108,240,214,.32), transparent 62%)}
-  .hero-arc{position:absolute;left:50%;bottom:-3%;width:150%;max-width:1500px;
-    transform:translateX(-50%) translate(var(--ax,0),var(--ay,0));transition:transform .25s ease-out}
-  .hero-arc svg{width:100%;height:auto;display:block}
-  .hero-floor{position:absolute;left:50%;bottom:0;width:280%;height:46%;
-    transform:translateX(-50%) perspective(340px) rotateX(70deg);transform-origin:bottom center;
+      radial-gradient(1.6px 1.6px at 12% 22%, rgba(255,255,255,.9), transparent),
+      radial-gradient(1.4px 1.4px at 80% 14%, rgba(214,255,245,.75), transparent),
+      radial-gradient(1.3px 1.3px at 62% 30%, rgba(255,255,255,.75), transparent),
+      radial-gradient(1.7px 1.7px at 28% 10%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1.3px 1.3px at 90% 34%, rgba(214,255,245,.6), transparent),
+      radial-gradient(1.4px 1.4px at 45% 16%, rgba(255,255,255,.6), transparent),
+      radial-gradient(1.2px 1.2px at 18% 40%, rgba(214,255,245,.5), transparent),
+      radial-gradient(1.2px 1.2px at 72% 44%, rgba(255,255,255,.45), transparent)}
+  .hero-arc{position:absolute;inset:0;transform:translate(var(--ax,0),var(--ay,0));transition:transform .3s ease-out}
+  .hero-arc svg{position:absolute;inset:0;width:100%;height:100%}
+  .hero-city{position:absolute;left:0;right:0;bottom:30%;height:14%;opacity:.55}
+  .hero-city svg{width:100%;height:100%;display:block}
+  .hero-floor{position:absolute;left:50%;bottom:0;width:300%;height:34%;
+    transform:translateX(-50%) perspective(320px) rotateX(72deg);transform-origin:bottom center;
     background-image:
-      linear-gradient(to right, rgba(108,240,214,.28) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(108,240,214,.28) 1px, transparent 1px);
-    background-size:64px 64px;
-    -webkit-mask-image:linear-gradient(to top,#000 4%, transparent 72%);
-    mask-image:linear-gradient(to top,#000 4%, transparent 72%);
+      linear-gradient(to right, rgba(62,224,192,.32) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(62,224,192,.32) 1px, transparent 1px);
+    background-size:60px 60px;
+    -webkit-mask-image:linear-gradient(to top,#000 2%, transparent 78%);
+    mask-image:linear-gradient(to top,#000 2%, transparent 78%);
     animation:floorFlow 7s linear infinite}
-  @keyframes floorFlow{from{background-position:0 0}to{background-position:0 64px}}
+  @keyframes floorFlow{from{background-position:0 0}to{background-position:0 60px}}
 
-  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:90px 0 100px}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:78px 0 96px}
   .hero h1{font-size:clamp(2.1rem,5vw,3.7rem);font-weight:900;line-height:1.1;letter-spacing:-.02em}
   .hero h1 .hl{background:linear-gradient(120deg,#9ef0a8,#6cf0d6);-webkit-background-clip:text;background-clip:text;color:transparent}
   .hero p.progname{font-size:clamp(1.02rem,1.7vw,1.22rem);font-weight:700;color:#9ef0a8;margin:16px 0 0;letter-spacing:-.01em}
@@ -161,26 +161,32 @@
 
   /* ---------- HERO ART (futuristic finance + AI classroom) ---------- */
   .hero-art{position:relative;width:100%}
-  .hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 28px 55px rgba(0,4,10,.45))}
-  .art-chip{
-    position:absolute;display:flex;align-items:center;gap:8px;
-    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
-    backdrop-filter:blur(8px);padding:9px 14px;border-radius:14px;
-    font-weight:700;font-size:.86rem;color:#eafffb;box-shadow:0 12px 30px -12px rgba(0,0,0,.55);white-space:nowrap;
+  .art-stage{position:absolute;left:50%;bottom:2%;width:92%;height:38%;transform:translateX(-50%);pointer-events:none;
+    background:radial-gradient(50% 50% at 50% 60%, rgba(52,220,201,.32), rgba(31,191,122,.12) 45%, transparent 72%);filter:blur(4px)}
+  .art-illu{position:relative;z-index:1;width:100%;height:auto;display:block;
+    filter:drop-shadow(0 26px 55px rgba(0,0,0,.55)) drop-shadow(0 0 34px rgba(52,220,201,.28))}
+  .art-card{
+    position:absolute;z-index:3;display:flex;align-items:center;gap:11px;
+    background:rgba(8,40,44,.62);border:1px solid rgba(108,240,214,.32);
+    backdrop-filter:blur(10px);padding:11px 15px;border-radius:16px;
+    box-shadow:0 16px 40px -16px rgba(0,0,0,.7);white-space:nowrap;
   }
-  .art-chip b{color:#9ef0a8}
-  .art-chip.c1{top:5%;inset-inline-start:-5%;animation:bob 6s ease-in-out infinite}
-  .art-chip.c2{bottom:20%;inset-inline-end:-5%;animation:bob 7s ease-in-out infinite .6s}
+  .art-card .ac-ic{flex:0 0 auto;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#19c4c2,#3ed99a);color:#053b3f;font-size:1.05rem}
+  .art-card .ac-tx{display:flex;flex-direction:column;line-height:1.2}
+  .art-card .ac-tx b{color:#eafffb;font-size:.92rem;font-weight:800}
+  .art-card .ac-tx small{color:#9fd9cf;font-size:.74rem}
+  .art-card.c1{top:3%;inset-inline-start:-7%;animation:bob 6s ease-in-out infinite}
+  .art-card.c2{bottom:24%;inset-inline-end:-8%;animation:bob 7s ease-in-out infinite .6s}
   @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-  .art-stats{
-    display:flex;gap:10px;margin-top:16px;
-  }
+  .art-stats{display:flex;gap:10px;margin-top:18px;position:relative;z-index:2}
   .art-stats .s{
-    flex:1;text-align:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+    flex:1;text-align:center;background:rgba(8,40,44,.5);border:1px solid rgba(108,240,214,.22);
     border-radius:14px;padding:12px 8px;backdrop-filter:blur(6px);
   }
   .art-stats .s b{display:block;font-size:1.5rem;font-weight:900;color:#9ef0a8;line-height:1}
-  .art-stats .s span{font-size:.76rem;color:#d6fff5}
+  .art-stats .s span{font-size:.76rem;color:#bfe9e0}
+  @media(max-width:600px){.art-card{display:none}}
 
   /* ---------- TRUST STRIP ---------- */
   .trust{background:#fff;border-bottom:1px solid rgba(15,163,168,.1)}
@@ -458,28 +464,34 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero-scene" aria-hidden="true">
+    <div class="hero-halo"></div>
     <div class="hero-stars"></div>
-    <div class="hero-glow"></div>
     <div class="hero-arc">
-      <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax meet">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
         <defs>
-          <linearGradient id="arcG" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#3ed99a" stop-opacity="0"/>
-            <stop offset="0.28" stop-color="#6cf0d6" stop-opacity=".8"/>
+          <linearGradient id="arcRim" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#1fbf7a" stop-opacity="0"/>
+            <stop offset="0.30" stop-color="#34dcc9" stop-opacity=".75"/>
             <stop offset="0.5" stop-color="#eafffb"/>
-            <stop offset="0.72" stop-color="#6cf0d6" stop-opacity=".8"/>
-            <stop offset="1" stop-color="#3ed99a" stop-opacity="0"/>
+            <stop offset="0.70" stop-color="#6cf0d6" stop-opacity=".75"/>
+            <stop offset="1" stop-color="#1fbf7a" stop-opacity="0"/>
           </linearGradient>
-          <radialGradient id="arcBloom" cx="50%" cy="100%" r="72%">
-            <stop offset="0" stop-color="#9ef0a8" stop-opacity=".45"/>
-            <stop offset="0.5" stop-color="#34dcc9" stop-opacity=".14"/>
-            <stop offset="1" stop-color="#34dcc9" stop-opacity="0"/>
+          <radialGradient id="planet" cx="50%" cy="100%" r="62%">
+            <stop offset="0" stop-color="#0a4a4a" stop-opacity=".5"/>
+            <stop offset="0.7" stop-color="#0a4a4a" stop-opacity="0"/>
           </radialGradient>
-          <filter id="arcBlur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+          <filter id="arcGlowBig" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="17"/></filter>
+          <filter id="arcGlowSm" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
         </defs>
-        <ellipse cx="600" cy="780" rx="600" ry="540" fill="url(#arcBloom)"/>
-        <ellipse cx="600" cy="780" rx="600" ry="540" fill="none" stroke="url(#arcG)" stroke-width="4" filter="url(#arcBlur)"/>
-        <ellipse cx="600" cy="780" rx="600" ry="540" fill="none" stroke="url(#arcG)" stroke-width="1.4"/>
+        <circle cx="800" cy="1260" r="1160" fill="url(#planet)"/>
+        <circle cx="800" cy="1260" r="1160" fill="none" stroke="url(#arcRim)" stroke-width="26" filter="url(#arcGlowBig)" opacity=".55"/>
+        <circle cx="800" cy="1260" r="1160" fill="none" stroke="url(#arcRim)" stroke-width="6" filter="url(#arcGlowSm)"/>
+        <circle cx="800" cy="1260" r="1160" fill="none" stroke="url(#arcRim)" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="hero-city">
+      <svg viewBox="0 0 1600 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <path fill="#031a1e" d="M0,120 V70 h40 v-18 h26 v18 h30 v-34 h22 v34 h34 v-22 h28 v22 h40 v-48 h20 v48 h30 v-26 h26 v26 h36 v-16 h24 v16 h40 v-40 h22 v40 h32 v-22 h26 v22 h38 v-30 h22 v30 h34 v-18 h26 v18 h42 v-44 h20 v44 h30 v-24 h26 v24 h36 v-16 h24 v16 h40 v-38 h22 v38 h32 v-22 h26 v22 h38 v-30 h22 v30 h34 v-18 h26 v18 h44 v-40 h20 v40 h30 v-24 h26 v24 h36 v-16 h24 v16 h40 v-46 h22 v46 h32 v-22 h26 v22 h38 v-28 h22 v28 h60 V120 Z"/>
       </svg>
     </div>
     <div class="hero-floor"></div>
@@ -504,9 +516,16 @@
     </div>
     <div>
       <div class="hero-art">
-        <span class="art-chip c1"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-ai"/></svg> <span>AI&nbsp;+&nbsp;סימולציות</span></span>
-        <span class="art-chip c2"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-trend"/></svg> <b>+24%</b>&nbsp;תשואה וירטואלית</span>
-        <svg viewBox="0 0 560 500" role="img" aria-label="תלמידים לומדים פיננסים ובינה מלאכותית בכיתה עתידנית מול לוח נתונים חכם">
+        <span class="art-stage" aria-hidden="true"></span>
+        <span class="art-card c1">
+          <span class="ac-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-ai"/></svg></span>
+          <span class="ac-tx"><b>מנותח מבוסס AI</b><small>זיהוי מגמות בזמן אמת</small></span>
+        </span>
+        <span class="art-card c2">
+          <span class="ac-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-cap"/></svg></span>
+          <span class="ac-tx"><b>למידה אינטראקטיבית</b><small>סימולציות, משחקים וכלים</small></span>
+        </span>
+        <svg class="art-illu" viewBox="0 0 560 500" role="img" aria-label="תלמידים לומדים פיננסים ובינה מלאכותית בכיתה עתידנית מול לוח נתונים חכם">
           <defs>
             <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#0b4f57"/><stop offset="1" stop-color="#06343a"/>
@@ -1093,7 +1112,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   if(!hero) return;
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const stars=hero.querySelector('.hero-stars'),
-        glow=hero.querySelector('.hero-glow'),
+        glow=hero.querySelector('.hero-halo'),
         arc=hero.querySelector('.hero-arc');
   let raf=0,tx=0,ty=0;
   function apply(){
