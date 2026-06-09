@@ -73,18 +73,19 @@
     transition:box-shadow .3s;
   }
   header.nav.scrolled{box-shadow:0 10px 30px -20px rgba(6,62,68,.5)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.15rem}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.08rem;white-space:nowrap;flex:0 0 auto}
   .brand .logo{
-    width:40px;height:40px;border-radius:12px;flex:0 0 auto;
+    width:38px;height:38px;border-radius:12px;flex:0 0 auto;
     background:var(--grad-btn);display:grid;place-items:center;
     color:#fff;font-weight:900;box-shadow:var(--shadow-sm);
     transform:rotate(-6deg);
   }
-  .brand small{display:block;font-weight:500;font-size:.7rem;color:var(--ink-soft);margin-top:-2px}
-  .nav-links{display:flex;align-items:center;gap:6px}
-  .nav-links a{padding:9px 14px;border-radius:11px;font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:.2s}
+  .brand small{display:block;font-weight:500;font-size:.68rem;color:var(--ink-soft);margin-top:-1px;white-space:nowrap}
+  .nav-links{display:flex;align-items:center;gap:2px}
+  .nav-links a{padding:8px 11px;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--ink-soft);transition:.2s;white-space:nowrap}
   .nav-links a:hover{color:var(--teal-800);background:var(--bg-2)}
+  .nav-cta .btn-ghost{padding:9px 16px;font-size:.92rem}
   .btn{
     display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;
     font-family:inherit;font-weight:800;font-size:1rem;
@@ -358,7 +359,7 @@
     .method-grid{grid-template-columns:repeat(2,1fr)}
     footer .fgrid{grid-template-columns:1fr 1fr}
   }
-  @media(max-width:760px){
+  @media(max-width:940px){
     .nav-links{
       position:fixed;inset:70px 0 auto 0;background:rgba(243,252,251,.98);backdrop-filter:blur(14px);
       flex-direction:column;align-items:stretch;gap:0;padding:14px 18px 22px;
@@ -368,6 +369,8 @@
     .nav-links a{padding:13px 12px;border-radius:11px;font-size:1.02rem}
     .nav-cta .btn-ghost{display:none}
     .hamburger{display:block}
+  }
+  @media(max-width:760px){
     .g2,.g3,.g4{grid-template-columns:1fr}
     .lessons{grid-template-columns:1fr}
     .method-grid{grid-template-columns:1fr}
@@ -390,8 +393,7 @@
     <nav class="nav-links" id="navLinks">
       <a href="#about">על התכנית</a>
       <a href="#audience">למי מתאים</a>
-      <a href="#method">דרכי הוראה</a>
-      <a href="#syllabus">סילבוס ומערכי שיעור</a>
+      <a href="#syllabus">סילבוס</a>
       <a href="#teacher">המרצה</a>
       <a href="#details">תת-סל 60414</a>
       <a href="#order">מחירון והזמנה</a>
