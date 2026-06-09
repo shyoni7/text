@@ -349,6 +349,8 @@
   .center{text-align:center}
   .mx-auto{margin-inline:auto}
   .mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}
+  /* ---------- inline SVG icons ---------- */
+  .ic{width:1.3em;height:1.3em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:-0.18em;flex:0 0 auto}
 
   /* ---------- a11y & polish (UI/UX pre-delivery checklist) ---------- */
   [id]{scroll-margin-top:90px}
@@ -394,6 +396,7 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="ic-badge-check" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></symbol><symbol id="ic-book" viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h7v16H6a2 2 0 0 0-2 2z"/><path d="M13 3h5a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2h-5"/></symbol><symbol id="ic-cap" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-4 9 4-9 4-9-4z"/><path d="M7 11v4c0 1.2 2.4 2.6 5 2.6s5-1.4 5-2.6v-4"/><path d="M21 9v5"/></symbol><symbol id="ic-puzzle" viewBox="0 0 24 24" fill="none"><path d="M9 4h2a1.5 1.5 0 1 1 3 0h2a1 1 0 0 1 1 1v2a1.5 1.5 0 1 1 0 3v3a1 1 0 0 1-1 1h-3a1.5 1.5 0 1 0-3 0H5a1 1 0 0 1-1-1v-3a1.5 1.5 0 1 0 0-3V5a1 1 0 0 1 1-1z"/></symbol><symbol id="ic-flag" viewBox="0 0 24 24" fill="none"><path d="M5 21V4"/><path d="M5 4h11l-2 3 2 3H5"/></symbol><symbol id="ic-ai" viewBox="0 0 24 24" fill="none"><rect x="5" y="8" width="14" height="11" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9.5" cy="13" r="1"/><circle cx="14.5" cy="13" r="1"/><path d="M2 12v3M22 12v3"/></symbol><symbol id="ic-trend" viewBox="0 0 24 24" fill="none"><path d="M4 16l5-5 3 3 7-7"/><path d="M16 7h4v4"/></symbol><symbol id="ic-bulb" viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.3 1 2.5h6c0-1.2.2-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol><symbol id="ic-target" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="ic-brain" viewBox="0 0 24 24" fill="none"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8V15a3 3 0 0 0 4 2.8"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5.8V15a3 3 0 0 1-4 2.8"/><path d="M12 4v14"/></symbol><symbol id="ic-sprout" viewBox="0 0 24 24" fill="none"><path d="M12 20v-7"/><path d="M12 13c0-3 2-5 6-5 0 4-3 5-6 5z"/><path d="M12 13c0-2.5-2-4-5-4 0 3 2.5 4 5 4z"/></symbol><symbol id="ic-money" viewBox="0 0 24 24" fill="none"><path d="M9.5 3h5l-1.3 2.4h-2.4z"/><path d="M13 5.4C16.5 7 19 10 19 14a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5c0-4 2.5-7 6-8.6"/><path d="M12 9v6M10.4 10.6h2.2a1.3 1.3 0 0 1 0 2.6h-1.2a1.3 1.3 0 0 0 0 2.6h2"/></symbol><symbol id="ic-bars" viewBox="0 0 24 24" fill="none"><path d="M3 20h18"/><line x1="6.5" y1="20" x2="6.5" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="17.5" y1="20" x2="17.5" y2="10"/></symbol><symbol id="ic-scale" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M7 20h10"/><path d="M12 6L5 8 2.6 13a3 3 0 0 0 4.8 0L5 8"/><path d="M12 6l7 2 2.4 5a3 3 0 0 1-4.8 0L19 8"/></symbol><symbol id="ic-shield" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="ic-users" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 6a3 3 0 0 1 0 6M21 19a6 6 0 0 0-5-5.9"/></symbol><symbol id="ic-backpack" viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0 1 12 0v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 9a3 3 0 0 1 6 0"/><path d="M9 14h6v4H9z"/></symbol><symbol id="ic-family" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="2.4"/><circle cx="17" cy="7" r="2.4"/><path d="M3 19a4 4 0 0 1 8 0M13 19a4 4 0 0 1 8 0"/><circle cx="12" cy="13" r="1.7"/><path d="M9.6 20a2.4 2.4 0 0 1 4.8 0"/></symbol><symbol id="ic-apple" viewBox="0 0 24 24" fill="none"><path d="M12 8c-2-2-6-1.6-6 3 0 4 3 8 6 8s6-4 6-8c0-4.6-4-5-6-3z"/><path d="M12 8c0-2 1-3.2 3-3.6"/></symbol><symbol id="ic-school" viewBox="0 0 24 24" fill="none"><path d="M3 21h18"/><path d="M5 21V9l7-4 7 4v12"/><path d="M9.5 21v-5h5v5"/><path d="M12 5V3"/></symbol><symbol id="ic-flask" viewBox="0 0 24 24" fill="none"><path d="M9 3h6M10 3v6l-5 8a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-8V3"/><path d="M7.5 15h9"/></symbol><symbol id="ic-presenter" viewBox="0 0 24 24" fill="none"><rect x="3" y="3.5" width="12" height="9" rx="1"/><path d="M9 12.5v3"/><circle cx="18" cy="9" r="2"/><path d="M15 19a3 3 0 0 1 6 0"/></symbol><symbol id="ic-dice" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.1"/><circle cx="15" cy="15" r="1.1"/><circle cx="15" cy="9" r="1.1"/><circle cx="9" cy="15" r="1.1"/></symbol><symbol id="ic-device" viewBox="0 0 24 24" fill="none"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></symbol><symbol id="ic-folders" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v1H3z"/><path d="M3 10h18l-1.2 8a2 2 0 0 1-2 1.6H6.2a2 2 0 0 1-2-1.6z"/></symbol><symbol id="ic-user" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol><symbol id="ic-building" viewBox="0 0 24 24" fill="none"><path d="M3 21h18"/><path d="M5 21V10M9.5 21V10M14.5 21V10M19 21V10"/><path d="M4 10h16"/><path d="M12 3l8 5H4z"/></symbol><symbol id="ic-receipt" viewBox="0 0 24 24" fill="none"><path d="M6 3h12v18l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3L6 21z"/><path d="M9 8h6M9 12h5"/></symbol><symbol id="ic-briefcase" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></symbol><symbol id="ic-clipboard" viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9z"/><path d="M9 11h6M9 15h4"/></symbol><symbol id="ic-hash" viewBox="0 0 24 24" fill="none"><path d="M5 9h14M5 15h14M10 4l-1.6 16M15.6 4L14 20"/></symbol><symbol id="ic-repeat" viewBox="0 0 24 24" fill="none"><path d="M4 9a5 5 0 0 1 5-5h7"/><path d="M14 1l3 3-3 3"/><path d="M20 15a5 5 0 0 1-5 5H8"/><path d="M10 23l-3-3 3-3"/></symbol><symbol id="ic-laptop" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="11" rx="1"/><path d="M2 20h20"/></symbol><symbol id="ic-globe" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15 0 18M12 3c-2.5 2.6-2.5 15 0 18"/></symbol><symbol id="ic-map" viewBox="0 0 24 24" fill="none"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol><symbol id="ic-alert" viewBox="0 0 24 24" fill="none"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></symbol><symbol id="ic-tag" viewBox="0 0 24 24" fill="none"><path d="M3 12l9-9 8 8-9 9z"/><circle cx="8.5" cy="8.5" r="1.3"/></symbol><symbol id="ic-cart" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M3 4h2l2.4 12h10L20 8H6"/></symbol><symbol id="ic-star" viewBox="0 0 24 24" fill="none"><path d="M12 4l2.3 4.7 5.2.8-3.8 3.6.9 5.1L12 16.8l-4.6 2.2.9-5.1-3.8-3.6 5.2-.8z"/></symbol><symbol id="ic-mail" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></symbol><symbol id="ic-phone" viewBox="0 0 24 24" fill="none"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L19 17l-1 3a16 16 0 0 1-13-13z"/></symbol><symbol id="ic-chat" viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-4 4v-4H6a2 2 0 0 1-2-2z"/></symbol><symbol id="ic-help" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 4 1.6c0 1.6-2 2-2 3.4"/><path d="M12 17h.01"/></symbol><symbol id="ic-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6"/></symbol></defs></svg>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
@@ -426,15 +429,15 @@
   <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)">✅ תכנית מאושרת בתת-סל · מס׳ 60414</span>
+      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-badge-check"/></svg> תכנית מאושרת בתת-סל · מס׳ 60414</span>
       <h1>נותנים לתלמידים<br><span class="hl">כלים פיננסיים לחיים</span></h1>
       <p class="progname">התכנית להשכלה ויזמות פיננסית בעולמות המחר</p>
       <p class="sub">תכנית חינוך פיננסי חווייתית ומעשית — מהבנת ערך הכסף ועד שוק ההון, קריפטו ויזמות. לומדים דרך משחקים, סימולציות וכלים טכנולוגיים, ויוצאים עם ביטחון, אחריות ועצמאות כלכלית.</p>
       <div class="hero-badges">
-        <span>📚 30 מפגשים · 60 שעות</span>
-        <span>🎓 חט״ב ועליונה</span>
-        <span>🧩 למידה חווייתית</span>
-        <span>🏁 פרויקט גמר</span>
+        <span><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-book"/></svg> 30 מפגשים · 60 שעות</span>
+        <span><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-cap"/></svg> חט״ב ועליונה</span>
+        <span><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-puzzle"/></svg> למידה חווייתית</span>
+        <span><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-flag"/></svg> פרויקט גמר</span>
       </div>
       <div class="hero-actions">
         <a href="#order" class="btn btn-primary">הזמינו את הקורס לבית הספר ←</a>
@@ -443,8 +446,8 @@
     </div>
     <div>
       <div class="hero-art">
-        <span class="art-chip c1">🤖 <span>AI&nbsp;+&nbsp;סימולציות</span></span>
-        <span class="art-chip c2">📈 <b>+24%</b>&nbsp;תשואה וירטואלית</span>
+        <span class="art-chip c1"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-ai"/></svg> <span>AI&nbsp;+&nbsp;סימולציות</span></span>
+        <span class="art-chip c2"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-trend"/></svg> <b>+24%</b>&nbsp;תשואה וירטואלית</span>
         <svg viewBox="0 0 560 500" role="img" aria-label="תלמידים לומדים פיננסים ובינה מלאכותית בכיתה עתידנית מול לוח נתונים חכם">
           <defs>
             <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
@@ -578,24 +581,24 @@
 <section class="section-pad" id="about">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">💡 הרציונל</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-bulb"/></svg> הרציונל</span>
       <h2 class="title">תלמידים רבים מסיימים בית ספר<br>בלי הכלים להתמודד עם כסף</h2>
       <p class="lead mx-auto mt16">התכנית פותחה מתוך פער אמיתי במערכת החינוך: צעירים יוצאים לחיים בלי ידע בסיסי בניהול תקציב, חיסכון, אשראי או השקעות — וזה עולה להם ביוקר. אנחנו הופכים את העולם הכלכלי מנושא מופשט ורחוק לכלי יומיומי, מוחשי ורלוונטי.</p>
     </div>
 
     <div class="grid g3 mt32">
       <div class="card reveal">
-        <div class="ico">🎯</div>
+        <div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-target"/></svg></div>
         <h3>אוריינות פיננסית מעשית</h3>
         <p>מקנים ידע בסיסי ומתקדם — ניהול תקציב, חיסכון, השקעות, אינפלציה, ריבית, מיסוי ושוק ההון — בשפה שמדברת אל בני הנוער.</p>
       </div>
       <div class="card reveal">
-        <div class="ico">🧠</div>
+        <div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-brain"/></svg></div>
         <h3>חשיבה ביקורתית ומסוגלות</h3>
         <p>מפתחים יכולת לנתח חלופות, להעריך סיכונים ולקבל החלטות עצמאיות — ובונים תחושת מסוגלות אמיתית בעולם כלכלי משתנה.</p>
       </div>
       <div class="card reveal">
-        <div class="ico">🌱</div>
+        <div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-sprout"/></svg></div>
         <h3>שליחות חברתית</h3>
         <p>התלמידים הופכים למקור ידע גם עבור המשפחה והקהילה, ומביאים לשיח בריא יותר סביב התנהלות כלכלית נבונה.</p>
       </div>
@@ -607,14 +610,14 @@
 <section class="band section-pad">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">🎓 מטרות וערכים</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-cap"/></svg> מטרות וערכים</span>
       <h2 class="title">מה התלמידים לוקחים איתם לחיים</h2>
     </div>
     <div class="grid g4 mt32">
-      <div class="card reveal"><div class="ico">💰</div><h3>אחריות אישית</h3><p>הבנה שההתנהלות שלנו משפיעה ישירות על התוצאות — לומדים כדי לחיות נכון, לא רק כדי לעבור את השיעור.</p></div>
-      <div class="card reveal"><div class="ico">📊</div><h3>ניהול תקציב</h3><p>מהבית, דרך העסק ועד המדינה — אותם יסודות: הפרדת הכנסות מהוצאות, קיטלוג נכון וזיהוי הזדמנויות לחיסכון.</p></div>
-      <div class="card reveal"><div class="ico">⚖️</div><h3>קבלת החלטות</h3><p>בחינת חלופות, הערכת סיכון מול סיכוי והבנת ההשלכות — לפני כל החלטה פיננסית.</p></div>
-      <div class="card reveal"><div class="ico">🛡️</div><h3>עצמאות כלכלית</h3><p>הכנה לחיים הבוגרים: הימנעות מטעויות יקרות, תכנון נכון וביטחון בהתנהלות מול מערכת פיננסית מורכבת.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-money"/></svg></div><h3>אחריות אישית</h3><p>הבנה שההתנהלות שלנו משפיעה ישירות על התוצאות — לומדים כדי לחיות נכון, לא רק כדי לעבור את השיעור.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-bars"/></svg></div><h3>ניהול תקציב</h3><p>מהבית, דרך העסק ועד המדינה — אותם יסודות: הפרדת הכנסות מהוצאות, קיטלוג נכון וזיהוי הזדמנויות לחיסכון.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-scale"/></svg></div><h3>קבלת החלטות</h3><p>בחינת חלופות, הערכת סיכון מול סיכוי והבנת ההשלכות — לפני כל החלטה פיננסית.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-shield"/></svg></div><h3>עצמאות כלכלית</h3><p>הכנה לחיים הבוגרים: הימנעות מטעויות יקרות, תכנון נכון וביטחון בהתנהלות מול מערכת פיננסית מורכבת.</p></div>
     </div>
   </div>
 </section>
@@ -623,15 +626,15 @@
 <section class="section-pad" id="audience">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">👥 למי מתאים</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-users"/></svg> למי מתאים</span>
       <h2 class="title">תכנית אחת — ערך לכל בעלי העניין</h2>
       <p class="lead mx-auto mt16">בנינו את התכנית כך שתדבר אל כולם: התלמידים בלב, וההורים, המורים והמנהלים שותפים מלאים למסע.</p>
     </div>
     <div class="grid g4 mt32">
-      <div class="card aud reveal"><div class="ico">🎒</div><h3>לתלמידים</h3><p>למידה חווייתית עם משחקים, סימולציות וכלים דיגיטליים — ידע שמרגישים שהוא רלוונטי לחיים כאן ועכשיו.</p></div>
-      <div class="card aud reveal"><div class="ico">👪</div><h3>להורים</h3><p>הילדים מביאים הביתה שיח כלכלי בריא — ולא פעם גם ההורים לומדים מושגים חדשים יחד איתם.</p></div>
-      <div class="card aud reveal"><div class="ico">🍎</div><h3>למורים</h3><p>מערכי שיעור מובנים, פעילויות מוכנות וכלים טכנולוגיים — תכנית מקצועית שקל להפעיל בכיתה.</p></div>
-      <div class="card aud reveal"><div class="ico">🏫</div><h3>למנהלים</h3><p>תכנית מותאמת לתת-סל / חינוך פיננסי, עם מדדי הערכה ברורים ופרויקט גמר שמציג תוצאות.</p></div>
+      <div class="card aud reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-backpack"/></svg></div><h3>לתלמידים</h3><p>למידה חווייתית עם משחקים, סימולציות וכלים דיגיטליים — ידע שמרגישים שהוא רלוונטי לחיים כאן ועכשיו.</p></div>
+      <div class="card aud reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-family"/></svg></div><h3>להורים</h3><p>הילדים מביאים הביתה שיח כלכלי בריא — ולא פעם גם ההורים לומדים מושגים חדשים יחד איתם.</p></div>
+      <div class="card aud reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-apple"/></svg></div><h3>למורים</h3><p>מערכי שיעור מובנים, פעילויות מוכנות וכלים טכנולוגיים — תכנית מקצועית שקל להפעיל בכיתה.</p></div>
+      <div class="card aud reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-school"/></svg></div><h3>למנהלים</h3><p>תכנית מותאמת לתת-סל / חינוך פיננסי, עם מדדי הערכה ברורים ופרויקט גמר שמציג תוצאות.</p></div>
     </div>
   </div>
 </section>
@@ -640,15 +643,15 @@
 <section class="band section-pad" id="method">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">🧪 דרכי הוראה</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-flask"/></svg> דרכי הוראה</span>
       <h2 class="title">למידה שנדבקת — כי היא נחווית</h2>
       <p class="lead mx-auto mt16">למידה משמעותית נוצרת דרך התנסות. כל מושג מורכב מונגש דרך חוויה פשוטה ובלתי נשכחת — למשל, שיעור על אינפלציה שמועבר במשחק חלוקת שטרות שממחיש כיצד ערך הכסף נשחק.</p>
     </div>
     <div class="method-grid mt32">
-      <div class="card reveal"><div class="ico">👨‍🏫</div><h3>שיעורים פרונטליים</h3><p>בסיס תיאורטי מובנה וברור לכל נושא.</p></div>
-      <div class="card reveal"><div class="ico">🎲</div><h3>משחקים וסימולציות</h3><p>מצבים אמיתיים — משבר כלכלי, העלאת ריבית, הזדמנויות בשוק.</p></div>
-      <div class="card reveal"><div class="ico">📱</div><h3>כלים טכנולוגיים</h3><p>תוכנה לניהול תקציב אישי והשקעות וירטואליות בסביבה בטוחה.</p></div>
-      <div class="card reveal"><div class="ico">🤖</div><h3>עוזר AI פיננסי</h3><p>יישום שמאפשר לתלמידים לשאול שאלות ולקבל טיפים פיננסיים.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-presenter"/></svg></div><h3>שיעורים פרונטליים</h3><p>בסיס תיאורטי מובנה וברור לכל נושא.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-dice"/></svg></div><h3>משחקים וסימולציות</h3><p>מצבים אמיתיים — משבר כלכלי, העלאת ריבית, הזדמנויות בשוק.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-device"/></svg></div><h3>כלים טכנולוגיים</h3><p>תוכנה לניהול תקציב אישי והשקעות וירטואליות בסביבה בטוחה.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-ai"/></svg></div><h3>עוזר AI פיננסי</h3><p>יישום שמאפשר לתלמידים לשאול שאלות ולקבל טיפים פיננסיים.</p></div>
     </div>
   </div>
 </section>
@@ -657,7 +660,7 @@
 <section class="section-pad" id="syllabus">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">🗂️ סילבוס ומערכי שיעור</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-folders"/></svg> סילבוס ומערכי שיעור</span>
       <h2 class="title">תכנית הלימודים המלאה — 30 מפגשים</h2>
       <p class="lead mx-auto mt16">לחצו על כל יחידה כדי לפתוח את מערך השיעור: תכני המפגש, המיומנויות והערכים. מבנה מודולרי שמאפשר להזמין את הקורס כולו או יחידות נבחרות.</p>
     </div>
@@ -682,14 +685,14 @@
         <img src="assets/yehonatan.webp" alt="יהונתן השלי — מפתח התכנית ומרצה" loading="lazy" />
       </div>
       <div class="reveal">
-        <span class="eyebrow">👤 מאחורי התכנית</span>
+        <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-user"/></svg> מאחורי התכנית</span>
         <h2 class="title">יהונתן השלי — מנהל, יזם ומורה</h2>
         <p class="lead mt16">פיתחתי את התכנית מתוך צורך שראיתי שוב ושוב אצל תלמידים והורים — חוסר בידע בסיסי להתנהלות כלכלית. אחרי 15+ שנים של ניהול חברות היי-טק וסטארט-אפים בחרתי להקדיש את עיקר עיסוקי לחינוך, ובמיוחד לחינוך פיננסי. השילוב בין ניסיון עסקי אמיתי ליכולת פדגוגית הוא הלב של התכנית.</p>
         <div class="grid g2 mt24">
-          <div class="cred"><span class="ci">🎓</span><div><b>תואר ראשון במנהל עסקים</b><span>מכללת רופין</span></div></div>
-          <div class="cred"><span class="ci">🧑‍🏫</span><div><b>תעודת הוראה בחינוך מיוחד</b><span>מורה בבית ספר לחינוך מיוחד</span></div></div>
-          <div class="cred"><span class="ci">🤖</span><div><b>פיתח את קורס ה-AI הרשמי הראשון</b><span>באישור משרד העבודה · הועבר גם לחיילים משוחררים</span></div></div>
-          <div class="cred"><span class="ci">🏛️</span><div><b>מנהל אקדמי</b><span>קורס מטמיעי מערכות AI · אוניברסיטת אריאל · יזמות במכללת פסגות</span></div></div>
+          <div class="cred"><span class="ci"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-cap"/></svg></span><div><b>תואר ראשון במנהל עסקים</b><span>מכללת רופין</span></div></div>
+          <div class="cred"><span class="ci"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-presenter"/></svg></span><div><b>תעודת הוראה בחינוך מיוחד</b><span>מורה בבית ספר לחינוך מיוחד</span></div></div>
+          <div class="cred"><span class="ci"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-ai"/></svg></span><div><b>פיתח את קורס ה-AI הרשמי הראשון</b><span>באישור משרד העבודה · הועבר גם לחיילים משוחררים</span></div></div>
+          <div class="cred"><span class="ci"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-building"/></svg></span><div><b>מנהל אקדמי</b><span>קורס מטמיעי מערכות AI · אוניברסיטת אריאל · יזמות במכללת פסגות</span></div></div>
         </div>
       </div>
     </div>
@@ -700,7 +703,7 @@
 <section class="section-pad">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">📈 מדד התוצאה</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-trend"/></svg> מדד התוצאה</span>
       <h2 class="title">איך נדע שזה עובד — מדד כפול</h2>
       <p class="lead mx-auto mt16">הערכה כפולה — פיננסית ופיסקלית — שבוחנת גם את הידע וגם את המוכנות ליישום בעולם האמיתי.</p>
     </div>
@@ -708,9 +711,9 @@
       מדד התוצאה שלנו יהיה כפול. <b>ברמה הפיננסית</b> התלמידים יצטרכו לבנות תקציב (גם משפחתי וגם לעסק — שנקרא דוח רווח והפסד), להכיר את המשמעות של מושגי מפתח מהעולם הפיננסי ולהסביר אותם בצורה נהירה וברורה. <b>ברמה הפיסקלית</b> הם יצטרכו לבנות תוכנית פיננסית אסטרטגית לניהול השקעות ולהציג אותה מול הכיתה / מול "משקיעים" שייתנו להם ציון — הן על התוכן, הן על רמת ההצגה, הביטחון העצמי ועוד. באמצעות שני מדדים אלו אנו נבחן הן את האוריינות הפיננסית שהתכנית רוצה להקנות, והן את המוכנות ליישום הידע בעולם האמיתי — כשהתלמידים יתמודדו עם האתגר שבהצגת מצגת מול קהל, קבלת ביקורת בונה והתאמת החומר הנלמד למציאות המעשית מחוץ לכיתה.
     </blockquote>
     <div class="grid g3 mt32">
-      <div class="card reveal"><div class="ico">🧾</div><h3>ברמה הפיננסית</h3><p>בניית תקציב משפחתי ותקציב לעסק (דוח רווח והפסד), והסבר ברור של מושגי מפתח מהעולם הפיננסי.</p></div>
-      <div class="card reveal"><div class="ico">💼</div><h3>ברמה הפיסקלית</h3><p>בניית תוכנית השקעות אסטרטגית והצגתה מול "משקיעים" — ציון על התוכן, ההצגה והביטחון העצמי.</p></div>
-      <div class="card reveal"><div class="ico">📊</div><h3>מדדים תומכים</h3><p>השתתפות מעל 80%, שאלוני ידע לפני ואחרי, מעורבות בדיונים ושימוש נכון במונחים פיננסיים.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-receipt"/></svg></div><h3>ברמה הפיננסית</h3><p>בניית תקציב משפחתי ותקציב לעסק (דוח רווח והפסד), והסבר ברור של מושגי מפתח מהעולם הפיננסי.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-briefcase"/></svg></div><h3>ברמה הפיסקלית</h3><p>בניית תוכנית השקעות אסטרטגית והצגתה מול "משקיעים" — ציון על התוכן, ההצגה והביטחון העצמי.</p></div>
+      <div class="card reveal"><div class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-bars"/></svg></div><h3>מדדים תומכים</h3><p>השתתפות מעל 80%, שאלוני ידע לפני ואחרי, מעורבות בדיונים ושימוש נכון במונחים פיננסיים.</p></div>
     </div>
   </div>
 </section>
@@ -719,23 +722,23 @@
 <section class="band section-pad" id="details">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">📋 פרטי התכנית במערכת תת-הסל</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-clipboard"/></svg> פרטי התכנית במערכת תת-הסל</span>
       <h2 class="title">תכנית מאושרת ומוכנה להזמנה</h2>
       <p class="lead mx-auto mt16">כל מה שמנהל/ת ורכז/ת צריכים לדעת במבט אחד — מתוך כרטיס התכנית הרשמי במערכת תת-הסל.</p>
     </div>
     <div class="spec-grid">
-      <div class="spec reveal"><span class="si">🔢</span><div><div class="sl">מספר תכנית</div><div class="sv">60414</div></div></div>
-      <div class="spec reveal"><span class="si">📚</span><div><div class="sl">נושא · תחום</div><div class="sv">כלכלה · לימודי</div></div></div>
-      <div class="spec reveal"><span class="si">🎓</span><div><div class="sl">אוכלוסיית יעד</div><div class="sv">חט״ב ועליונה</div></div></div>
-      <div class="spec reveal"><span class="si">🔁</span><div><div class="sl">סוג הפעילות</div><div class="sv">מתמשכת</div></div></div>
-      <div class="spec reveal"><span class="si">💻</span><div><div class="sl">אופן העברה</div><div class="sv">פרונטלי ומקוון</div></div></div>
-      <div class="spec reveal"><span class="si">🏫</span><div><div class="sl">סוג חינוך</div><div class="sv">רגיל ומיוחד</div></div></div>
-      <div class="spec reveal"><span class="si">🛡️</span><div><div class="sl">סוג פיקוח</div><div class="sv">ממלכתי · ממלכתי-דתי</div></div></div>
-      <div class="spec reveal"><span class="si">🌍</span><div><div class="sl">מגזרים</div><div class="sv">יהודי · ערבי · דרוזי</div></div></div>
-      <div class="spec reveal"><span class="si">🗺️</span><div><div class="sl">פריסה גאוגרפית</div><div class="sv">כל המחוזות</div></div></div>
-      <div class="spec reveal"><span class="si">🚨</span><div><div class="sl">התאמה לחירום</div><div class="sv">כן</div></div></div>
-      <div class="spec reveal"><span class="si">🧠</span><div><div class="sl">מיומנויות</div><div class="sv">חשיבה ביקורתית · אוריינות מידע</div></div></div>
-      <div class="spec reveal"><span class="si">🏷️</span><div><div class="sl">מקור תכנית</div><div class="sv">חיצוני · מגזר עסקי</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-hash"/></svg></span><div><div class="sl">מספר תכנית</div><div class="sv">60414</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-book"/></svg></span><div><div class="sl">נושא · תחום</div><div class="sv">כלכלה · לימודי</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-cap"/></svg></span><div><div class="sl">אוכלוסיית יעד</div><div class="sv">חט״ב ועליונה</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-repeat"/></svg></span><div><div class="sl">סוג הפעילות</div><div class="sv">מתמשכת</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-laptop"/></svg></span><div><div class="sl">אופן העברה</div><div class="sv">פרונטלי ומקוון</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-school"/></svg></span><div><div class="sl">סוג חינוך</div><div class="sv">רגיל ומיוחד</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-shield"/></svg></span><div><div class="sl">סוג פיקוח</div><div class="sv">ממלכתי · ממלכתי-דתי</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-globe"/></svg></span><div><div class="sl">מגזרים</div><div class="sv">יהודי · ערבי · דרוזי</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-map"/></svg></span><div><div class="sl">פריסה גאוגרפית</div><div class="sv">כל המחוזות</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-alert"/></svg></span><div><div class="sl">התאמה לחירום</div><div class="sv">כן</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-brain"/></svg></span><div><div class="sl">מיומנויות</div><div class="sv">חשיבה ביקורתית · אוריינות מידע</div></div></div>
+      <div class="spec reveal"><span class="si"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-tag"/></svg></span><div><div class="sl">מקור תכנית</div><div class="sv">חיצוני · מגזר עסקי</div></div></div>
     </div>
   </div>
 </section>
@@ -744,7 +747,7 @@
 <section class="pricing section-pad" id="order">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)">🛒 הזמנה ומחירון</span>
+      <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#eafffb;border-color:rgba(255,255,255,.22)"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-cart"/></svg> הזמנה ומחירון</span>
       <h2 class="title">הזמינו את התכנית לבית הספר</h2>
       <p class="lead mx-auto mt16" style="color:#cdfff3">מהרצאת היכרות בודדת ועד תכנית שנתית מלאה — אפשר להתאים את ההיקף, הגילאים והדגשים. ההזמנה מתבצעת דרך מערכת תת-הסל לפי מספר התכנית.</p>
     </div>
@@ -762,7 +765,7 @@
         <a href="#contact" class="btn btn-white">לתיאום מפגש</a>
       </div>
       <div class="price-card feat reveal">
-        <span class="ribbon">הכי פופולרי ⭐</span>
+        <span class="ribbon">הכי פופולרי <svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-star"/></svg></span>
         <h3>תכנית מלאה — 30 מפגשים</h3>
         <div class="price">60 שעות · מסע שלם לאורך השנה</div>
         <ul>
@@ -810,7 +813,7 @@
     </div>
 
     <div class="order-note reveal">
-      <span>📋 להזמנה דרך מערכת תת-הסל — חפשו את תכנית מס׳</span> <b>60414</b> <span>· "התכנית להשכלה ויזמות פיננסית בעולמות המחר"</span>
+      <span><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-clipboard"/></svg> להזמנה דרך מערכת תת-הסל — חפשו את תכנית מס׳</span> <b>60414</b> <span>· "התכנית להשכלה ויזמות פיננסית בעולמות המחר"</span>
     </div>
   </div>
 </section>
@@ -820,14 +823,14 @@
   <div class="wrap">
     <div class="contact-grid">
       <div class="reveal">
-        <span class="eyebrow">✉️ דברו איתי</span>
+        <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-mail"/></svg> דברו איתי</span>
         <h2 class="title">מזמינים קורס, מפגש או הרצאה</h2>
         <p class="lead mt16">מלאו את הפרטים ואחזור אליכם עם הצעה מותאמת לבית הספר. אפשר גם להתקשר או לכתוב בוואטסאפ ישירות.</p>
         <div class="contact-side mt32">
-          <a class="ci-row" href="tel:+972523381822"><span class="ico">📞</span><div><b>טלפון</b><span>052-3381822</span></div></a>
-          <a class="ci-row" href="https://wa.me/972523381822?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%95%D7%A0%D7%AA%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%AA%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A%20%D7%94%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener"><span class="ico">💬</span><div><b>וואטסאפ</b><span>052-3381822 · הודעה מהירה לתיאום</span></div></a>
-          <a class="ci-row" href="mailto:yonibmyguest@gmail.com"><span class="ico">✉️</span><div><b>אימייל</b><span>yonibmyguest@gmail.com</span></div></a>
-          <div class="ci-row"><span class="ico">🏫</span><div><b>מתאים ל-</b><span>חטיבות ביניים וחטיבה עליונה · כיתות ט'–י"א</span></div></div>
+          <a class="ci-row" href="tel:+972523381822"><span class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-phone"/></svg></span><div><b>טלפון</b><span>052-3381822</span></div></a>
+          <a class="ci-row" href="https://wa.me/972523381822?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%95%D7%A0%D7%AA%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%AA%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A%20%D7%94%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener"><span class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-chat"/></svg></span><div><b>וואטסאפ</b><span>052-3381822 · הודעה מהירה לתיאום</span></div></a>
+          <a class="ci-row" href="mailto:yonibmyguest@gmail.com"><span class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-mail"/></svg></span><div><b>אימייל</b><span>yonibmyguest@gmail.com</span></div></a>
+          <div class="ci-row"><span class="ico"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-school"/></svg></span><div><b>מתאים ל-</b><span>חטיבות ביניים וחטיבה עליונה · כיתות ט'–י"א</span></div></div>
         </div>
       </div>
       <div class="card reveal">
@@ -872,7 +875,7 @@
 <section class="band section-pad">
   <div class="wrap" style="max-width:880px">
     <div class="center reveal">
-      <span class="eyebrow">❓ שאלות נפוצות</span>
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-help"/></svg> שאלות נפוצות</span>
       <h2 class="title">כל מה שכדאי לדעת</h2>
     </div>
     <div class="faq mt32 reveal">
@@ -917,9 +920,9 @@
       </div>
       <div>
         <h4>יצירת קשר</h4>
-        <a href="tel:+972523381822">📞 052-3381822</a>
-        <a href="https://wa.me/972523381822" target="_blank" rel="noopener">💬 וואטסאפ</a>
-        <a href="mailto:yonibmyguest@gmail.com">✉️ yonibmyguest@gmail.com</a>
+        <a href="tel:+972523381822"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-phone"/></svg> 052-3381822</a>
+        <a href="https://wa.me/972523381822" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-chat"/></svg> וואטסאפ</a>
+        <a href="mailto:yonibmyguest@gmail.com"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-mail"/></svg> yonibmyguest@gmail.com</a>
         <a href="#contact">טופס בקשה להצעה</a>
       </div>
     </div>
@@ -929,7 +932,7 @@
 
 <!-- ============ FLOATING ACTIONS ============ -->
 <div class="fab">
-  <a class="wa" href="https://wa.me/972523381822?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%95%D7%A0%D7%AA%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%AA%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A%20%D7%94%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener" aria-label="וואטסאפ">💬</a>
+  <a class="wa" href="https://wa.me/972523381822?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%95%D7%A0%D7%AA%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%AA%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A%20%D7%94%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-chat"/></svg></a>
   <a class="up" href="#top" aria-label="חזרה למעלה">↑</a>
 </div>
 
@@ -997,7 +1000,7 @@ function renderLessons(filter){
       <summary>
         <span class="mnum">מפגש<br>${l.n}</span>
         <span class="mhead"><span class="tag">${CATLABEL[l.cat]}</span><h4>${l.title}</h4></span>
-        <span class="chev">⌄</span>
+        <span class="chev"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-chevron"/></svg></span>
       </summary>
       <div class="body">
         <h5>תכני המפגש</h5>
