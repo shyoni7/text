@@ -313,6 +313,9 @@
   }
   form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--teal-500);box-shadow:0 0 0 4px rgba(25,196,194,.15)}
   form textarea{min-height:120px;resize:vertical}
+  .consent{display:flex;gap:11px;align-items:flex-start;margin:4px 0 16px;font-size:.9rem;color:var(--ink-soft);cursor:pointer;line-height:1.55}
+  .consent input{width:20px;height:20px;flex:0 0 auto;margin-top:2px;accent-color:var(--teal-600);cursor:pointer}
+  .consent a{color:var(--teal-700);font-weight:700;text-decoration:underline}
   .contact-side .ci-row{display:flex;gap:14px;align-items:center;margin-bottom:14px;padding:8px;border-radius:14px;transition:background .2s}
   a.ci-row:hover{background:var(--bg-2)}
   .contact-side .ci-row .ico{width:48px;height:48px;border-radius:14px;background:var(--grad-mint);color:var(--teal-700);display:grid;place-items:center;font-size:1.2rem;flex:0 0 auto}
@@ -381,6 +384,29 @@
   .fab a:hover{transform:scale(1.08)}
   .fab .wa{background:#25d366}
   .fab .up{background:var(--grad-btn);color:#053b3f;font-size:1.3rem}
+
+  /* ---------- COOKIE CONSENT ---------- */
+  .cookie-banner{
+    position:fixed;inset-block-end:0;inset-inline:0;z-index:80;
+    background:rgba(6,52,58,.97);backdrop-filter:blur(12px);color:#eafffb;
+    border-top:1px solid rgba(108,240,214,.28);box-shadow:0 -16px 40px -20px rgba(0,0,0,.6);
+    padding:18px 0;transform:translateY(120%);transition:transform .45s cubic-bezier(.2,.7,.2,1)
+  }
+  .cookie-banner.show{transform:none}
+  .cookie-inner{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;justify-content:space-between}
+  .cookie-text{flex:1 1 320px;font-size:.92rem;line-height:1.6;color:#d6fff5}
+  .cookie-text b{color:#9ef0a8}
+  .cookie-text a{color:#9ef0a8;font-weight:700;text-decoration:underline}
+  .cookie-actions{display:flex;flex-wrap:wrap;gap:10px;flex:0 0 auto}
+  .cookie-actions .btn{padding:11px 20px;font-size:.92rem;border-radius:12px}
+  .btn-cookie-accept{background:var(--grad-btn);color:#053b3f}
+  .btn-cookie-accept:hover{filter:brightness(1.05);transform:translateY(-1px)}
+  .btn-cookie-essential{background:rgba(255,255,255,.12);color:#eafffb;border:1.5px solid rgba(255,255,255,.3)}
+  .btn-cookie-essential:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}
+  @media(max-width:600px){
+    .cookie-actions{width:100%}
+    .cookie-actions .btn{flex:1;justify-content:center}
+  }
 
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -1045,6 +1071,10 @@
             <div class="f"><label for="school">בית ספר / ארגון</label><input id="school" name="ביתספר" type="text" placeholder="שם המוסד" /></div>
           </div>
           <div class="f"><label for="msg">הודעה</label><textarea id="msg" name="הודעה" placeholder="ספרו לי על הכיתה/השכבה, מספר התלמידים והדגשים שחשובים לכם"></textarea></div>
+          <label class="consent" for="privacyAgree">
+            <input id="privacyAgree" name="אישור_פרטיות" type="checkbox" value="כן" required />
+            <span>קראתי ואני מאשר/ת את <a href="/privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a> ומסכים/ה לכך שהפרטים שמסרתי ישמשו ליצירת קשר ולמתן מענה לפנייתי.</span>
+          </label>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">שליחת בקשה להצעה ←</button>
           <p style="font-size:.82rem;color:var(--ink-soft);margin-top:10px;text-align:center">השליחה תפתח את תוכנת הדוא"ל שלכם עם הפרטים מוכנים.</p>
         </form>
@@ -1108,7 +1138,10 @@
         <a href="#contact">טופס בקשה להצעה</a>
       </div>
     </div>
-    <div class="copy">© <span id="yr"></span> יהונתן השלי · התכנית להשכלה ויזמות פיננסית בעולמות המחר — תת-סל מס׳ 60414. כל הזכויות שמורות.</div>
+    <div class="copy">
+      © <span id="yr"></span> יהונתן השלי · התכנית להשכלה ויזמות פיננסית בעולמות המחר — תת-סל מס׳ 60414. כל הזכויות שמורות.
+      <br><a href="/privacy.html" style="display:inline;color:#9ef0a8;margin-top:8px">מדיניות פרטיות</a>
+    </div>
   </div>
 </footer>
 
@@ -1116,6 +1149,19 @@
 <div class="fab">
   <a class="wa" href="https://wa.me/972523381822?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%95%D7%A0%D7%AA%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%AA%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A%20%D7%94%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-chat"/></svg></a>
   <a class="up" href="#top" aria-label="חזרה למעלה">↑</a>
+</div>
+
+<!-- ============ COOKIE CONSENT ============ -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="הודעת עוגיות">
+  <div class="wrap cookie-inner">
+    <div class="cookie-text">
+      <b>אנחנו משתמשים בעוגיות</b> כדי להפעיל את האתר ולשפר את חוויית הגלישה. בלחיצה על "אישור" אתם מסכימים לשימוש בעוגיות בהתאם ל<a href="/privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>.
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-cookie-essential" id="cookieEssential">רק עוגיות חיוניות</button>
+      <button type="button" class="btn btn-cookie-accept" id="cookieAccept">אישור</button>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -1242,6 +1288,21 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
 
 document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ---------- Cookie consent ---------- */
+(function(){
+  var KEY='hasheli_cookie_consent';
+  var banner=document.getElementById('cookieBanner');
+  if(!banner) return;
+  function decided(){ try{ return localStorage.getItem(KEY); }catch(e){ return '1'; } }
+  function save(v){ try{ localStorage.setItem(KEY,v); }catch(e){} }
+  function hide(){ banner.classList.remove('show'); }
+  if(!decided()){
+    setTimeout(function(){ banner.classList.add('show'); }, 700);
+  }
+  document.getElementById('cookieAccept').addEventListener('click',function(){ save('all'); hide(); });
+  document.getElementById('cookieEssential').addEventListener('click',function(){ save('essential'); hide(); });
+})();
 </script>
 </body>
 </html>
