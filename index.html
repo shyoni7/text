@@ -436,6 +436,7 @@
   /* ---------- RESPONSIVE ---------- */
   @media(max-width:980px){
     .hero-grid{grid-template-columns:1fr;gap:34px;padding:64px 0 80px}
+    .hero-grid>div:last-child{order:-1}   /* image above the text */
     .teacher{grid-template-columns:1fr;gap:28px}
     .contact-grid{grid-template-columns:1fr;gap:30px}
     .price-grid{grid-template-columns:1fr;max-width:440px;margin-inline:auto}
@@ -474,19 +475,38 @@
 
     /* Hero — tighter spacing */
     .hero{min-height:auto;padding-bottom:0}
-    .hero-grid{padding:44px 0 56px;gap:24px}
+    .hero-grid{padding:34px 0 52px;gap:30px}
     .hero-badges{gap:7px}
     .hero-badges span{font-size:.82rem;padding:6px 11px}
     .hero-actions{flex-direction:column;gap:10px}
     .hero-actions .btn{width:100%;justify-content:center}
 
-    /* Hero art — cap SVG height on phone so it doesn't dominate */
-    .hero-art{max-width:340px;margin:0 auto}
-    .art-illu{width:100%;height:auto}
-    .art-stats{gap:8px}
-    .art-stats .s{padding:10px 6px}
-    .art-stats .s b{font-size:1.25rem}
+    /* Hero art — image ABOVE the text, with depth + innovation */
+    .hero-art{max-width:330px;margin:8px auto 0;padding-top:30px;
+      animation:artFloat 7s ease-in-out infinite}
+    /* glowing holographic pedestal beneath the image */
+    .art-stage{left:50%;bottom:-6%;width:100%;height:34%;filter:blur(7px);
+      background:radial-gradient(50% 60% at 50% 70%, rgba(52,220,201,.55), rgba(31,191,122,.18) 45%, transparent 72%)}
+    .hero-art::after{content:"";position:absolute;left:50%;bottom:-12%;width:74%;height:26px;
+      transform:translateX(-50%);border-radius:50%;pointer-events:none;
+      background:radial-gradient(50% 50% at 50% 50%, rgba(8,32,36,.6), transparent 72%);filter:blur(5px)}
+    /* layered depth shadow + neon rim glow on the illustration */
+    .art-illu{width:100%;height:auto;
+      filter:drop-shadow(0 30px 45px rgba(0,0,0,.6)) drop-shadow(0 10px 22px rgba(0,0,0,.45)) drop-shadow(0 0 30px rgba(52,220,201,.4))}
+    /* bring back the floating AI badges for an innovative feel */
+    .art-card{display:flex;padding:9px 12px;border-radius:14px}
+    .art-card .ac-ic{width:30px;height:30px;font-size:.95rem}
+    .art-card .ac-tx b{font-size:.82rem}
+    .art-card .ac-tx small{font-size:.68rem}
+    .art-card.c1{top:6%;inset-inline-start:-2%;animation:none;transform:scale(.9)}
+    .art-card.c2{bottom:30%;inset-inline-end:-2%;animation:none;transform:scale(.9)}
+    .art-stats{gap:8px;margin-top:22px}
+    .art-stats .s{padding:11px 6px}
+    .art-stats .s b{font-size:1.3rem}
     .art-stats .s span{font-size:.72rem}
+  }
+  @keyframes artFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media(max-width:600px){
 
     /* General cards */
     .card{padding:20px 18px}
