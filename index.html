@@ -240,24 +240,27 @@
   .chip.active,.chip:hover{background:var(--grad-btn);color:#053b3f;border-color:transparent;transform:translateY(-1px)}
   .lessons{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   .lesson{
-    background:#fff;border:1px solid rgba(15,163,168,.14);border-radius:18px;overflow:hidden;
+    background:var(--cbg,#fff);
+    border:1.5px solid color-mix(in srgb, var(--cac,#19c4c2) 30%, #ffffff);
+    border-radius:18px;overflow:hidden;
     box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s;
   }
-  .lesson:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .lesson:hover{transform:translateY(-3px);box-shadow:0 18px 38px -18px color-mix(in srgb, var(--cac,#19c4c2) 65%, transparent)}
   .lesson summary{
     list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:20px 22px;
   }
   .lesson summary::-webkit-details-marker{display:none}
   .lesson .mnum{
     flex:0 0 auto;min-width:58px;height:58px;border-radius:14px;display:grid;place-items:center;
-    background:var(--grad-hero);color:#eafffb;font-weight:900;font-size:.95rem;text-align:center;line-height:1.1;padding:4px;
+    background:var(--cac,var(--grad-hero));color:#fff;font-weight:900;font-size:.95rem;text-align:center;line-height:1.1;padding:4px;
+    box-shadow:0 8px 18px -8px color-mix(in srgb, var(--cac,#19c4c2) 80%, transparent);
   }
   .lesson .mhead{flex:1}
   .lesson .mhead h4{font-size:1.12rem;font-weight:800}
-  .lesson .mhead .tag{font-size:.8rem;color:var(--teal-700);font-weight:700}
-  .lesson .chev{transition:transform .3s;color:var(--teal-600);font-size:1.3rem}
+  .lesson .mhead .tag{font-size:.8rem;color:var(--cac,var(--teal-700));font-weight:800}
+  .lesson .chev{transition:transform .3s;color:var(--cac,var(--teal-600));font-size:1.3rem}
   .lesson[open] .chev{transform:rotate(180deg)}
-  .lesson .body{padding:0 22px 22px 22px;border-top:1px solid rgba(15,163,168,.1);animation:fade .35s ease}
+  .lesson .body{padding:0 22px 22px 22px;border-top:1.5px solid color-mix(in srgb, var(--cac,#19c4c2) 22%, #ffffff);animation:fade .35s ease}
   @keyframes fade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
   .lesson .body h5{margin:16px 0 8px;color:var(--teal-800);font-size:.95rem;font-weight:800}
   .lesson .body ul{padding-inline-start:20px}
@@ -265,6 +268,11 @@
   .pill-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
   .pill{background:var(--bg-2);color:var(--teal-800);font-size:.78rem;font-weight:700;padding:5px 11px;border-radius:999px;border:1px solid rgba(15,163,168,.15)}
   .pill.green{background:#e3fbef;color:var(--teal-800);border-color:rgba(31,191,122,.25)}
+  .lesson .pill{
+    background:color-mix(in srgb, var(--cac,#19c4c2) 13%, #ffffff);
+    color:color-mix(in srgb, var(--cac,#19c4c2) 72%, #0a3a3f);
+    border-color:color-mix(in srgb, var(--cac,#19c4c2) 30%, transparent);
+  }
 
   /* ---------- INSTRUCTOR ---------- */
   .teacher{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
@@ -1239,12 +1247,35 @@ const LESSONS = [
 ];
 const CATLABEL={base:"יסודות",manage:"ניהול וכספים",market:"שוק ההון וקריפטו",project:"יזמות ופרויקט גמר"};
 
+/* Happy pastel palette — a different cheerful color per topic */
+const PALETTE=[
+  {bg:"#e3f2ff",ac:"#2b9fe0"}, /* תכלת */
+  {bg:"#ddf7f4",ac:"#13b5b0"}, /* טורקיז */
+  {bg:"#e2f8ee",ac:"#1fb574"}, /* מנטה */
+  {bg:"#ddf6fb",ac:"#0fb0d4"}, /* אקווה */
+  {bg:"#eceaff",ac:"#6f6ef0"}, /* כחול-סגול */
+  {bg:"#ffe7f1",ac:"#e85b9a"}, /* ורוד */
+  {bg:"#e9f8e2",ac:"#5aa82a"}, /* ירוק */
+  {bg:"#fff3d8",ac:"#d99a13"}, /* ענבר */
+  {bg:"#f3eaff",ac:"#9b6ef0"}, /* לבנדר */
+  {bg:"#ffe9e2",ac:"#ef7748"}, /* אלמוג */
+  {bg:"#def3f0",ac:"#0e9aa0"}, /* טיל */
+  {bg:"#e6edff",ac:"#4f7ef0"}, /* כחול בהיר */
+  {bg:"#e0f7f0",ac:"#16b87f"}, /* אזמרגד */
+  {bg:"#e8f0ff",ac:"#5b8def"}, /* דרדר */
+  {bg:"#fdeafe",ac:"#cf5fd0"}, /* סחלב */
+  {bg:"#eafbe0",ac:"#74b821"}  /* ליים */
+];
+LESSONS.forEach((l,i)=>{ l.pal=PALETTE[i%PALETTE.length]; });
+
 const lessonsEl=document.getElementById('lessons');
 function renderLessons(filter){
   lessonsEl.innerHTML='';
   LESSONS.filter(l=>filter==='all'||l.cat===filter).forEach(l=>{
     const d=document.createElement('details');
     d.className='lesson';d.dataset.cat=l.cat;
+    d.style.setProperty('--cbg',l.pal.bg);
+    d.style.setProperty('--cac',l.pal.ac);
     d.innerHTML=`
       <summary>
         <span class="mnum">מפגש<br>${l.n}</span>
