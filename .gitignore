@@ -1,0 +1,3 @@
+# Claude Code local tooling (skills, settings) — not part of the website;
+# everything committed here gets deployed to the live site by Vercel.
+.claude/
