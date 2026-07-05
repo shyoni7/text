@@ -77,7 +77,7 @@
   /* ---------- NAV ---------- */
   header.nav{
     position:sticky;top:0;z-index:60;
-    background:rgba(243,252,251,.78);
+    background:rgba(255,255,255,.94);
     backdrop-filter:saturate(160%) blur(14px);
     border-bottom:1px solid rgba(15,163,168,.14);
     transition:box-shadow .3s;
@@ -92,6 +92,7 @@
     transform:rotate(-6deg);
   }
   .brand small{display:block;font-weight:500;font-size:.68rem;color:var(--ink-soft);margin-top:-1px;white-space:nowrap}
+  .brand-img{height:54px;width:auto;display:block}
   .nav-links{display:flex;align-items:center;gap:2px}
   .nav-links a{padding:8px 11px;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--ink-soft);transition:.2s;white-space:nowrap}
   .nav-links a:hover{color:var(--teal-800);background:var(--bg-2)}
@@ -112,11 +113,11 @@
   .hamburger span{display:block;width:22px;height:2.5px;background:var(--teal-800);margin:4px auto;border-radius:3px;transition:.3s}
 
   /* ---------- HERO (dark cinematic) ---------- */
-  .hero{position:relative;color:#eafffb;overflow:hidden;min-height:92vh;display:grid;align-items:center;
-    background:radial-gradient(85% 75% at 50% 26%, #08363c 0%, #052529 52%, #02161a 100%)}
+  .hero{position:relative;color:#eaf4ff;overflow:hidden;min-height:92vh;display:grid;align-items:center;
+    background:radial-gradient(85% 75% at 50% 26%, #12314f 0%, #0a2036 52%, #04101f 100%)}
   .hero .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.22;pointer-events:none;z-index:1;mix-blend-mode:screen}
-  .hero .b1{width:460px;height:460px;background:#3ed99a;top:-180px;left:-140px;animation:float1 14s ease-in-out infinite}
-  .hero .b2{width:400px;height:400px;background:#19c4c2;bottom:-200px;right:-120px;animation:float2 17s ease-in-out infinite}
+  .hero .b1{width:460px;height:460px;background:#27ae60;top:-180px;left:-140px;animation:float1 14s ease-in-out infinite}
+  .hero .b2{width:400px;height:400px;background:#23b1c4;bottom:-200px;right:-120px;animation:float2 17s ease-in-out infinite}
   .hero .b3{display:none}
   @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,40px)}}
   @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,-30px)}}
@@ -124,7 +125,7 @@
   /* ---------- HERO depth scene (CSS+SVG faux-3D) ---------- */
   .hero-scene{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
   .hero-halo{position:absolute;inset:0;mix-blend-mode:screen;transform:translate(var(--gx,0),var(--gy,0));transition:transform .3s ease-out;
-    background:radial-gradient(42% 34% at 50% 12%, rgba(158,240,168,.5), rgba(52,220,201,.16) 45%, transparent 72%)}
+    background:radial-gradient(42% 34% at 50% 12%, rgba(120,225,205,.45), rgba(35,177,196,.16) 45%, transparent 72%)}
   .hero-stars{position:absolute;inset:0;opacity:.8;transform:translate(var(--sx,0),var(--sy,0));transition:transform .3s ease-out;
     background-image:
       radial-gradient(1.6px 1.6px at 12% 22%, rgba(255,255,255,.9), transparent),
@@ -485,10 +486,8 @@
     .wrap{padding:0 16px}
     .section-pad{padding:48px 0}
 
-    /* Nav — prevent brand from overflowing */
-    .brand small{display:none}
-    .brand{font-size:.98rem;gap:8px}
-    .brand .logo{width:34px;height:34px;border-radius:10px}
+    /* Nav — compact logo */
+    .brand-img{height:42px}
     .nav-inner{gap:10px}
 
     /* Hero — tighter spacing */
@@ -690,7 +689,7 @@
   .stars{color:#ffd166;letter-spacing:3px;font-size:1.05rem}
 
   /* glass dashboard */
-  .dash{margin-top:48px;width:min(880px,100%);background:rgba(8,40,44,.55);border:1px solid rgba(108,240,214,.3);
+  .dash{margin-top:48px;width:min(880px,100%);background:rgba(10,28,48,.6);border:1px solid rgba(108,240,214,.3);
     border-radius:24px;backdrop-filter:blur(16px);overflow:hidden;
     box-shadow:0 40px 90px -35px rgba(0,0,0,.75), 0 0 44px rgba(52,220,201,.16);
     animation:dashFloat 8s ease-in-out infinite}
@@ -804,11 +803,8 @@
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand" aria-label="חינוך פיננסי בעולמות ה-AI">
-      <span class="logo">₪</span>
-      <span>חינוך פיננסי בעולמות ה-AI
-        <small>מספר תכנית 60414</small>
-      </span>
+    <a href="#top" class="brand" aria-label="YHS — חינוך פיננסי בעולמות ה-AI">
+      <img class="brand-img" src="assets/logo-yhs.svg" alt="YHS — חינוך פיננסי בעולמות ה-AI" />
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#about">על התכנית</a>
@@ -843,8 +839,8 @@
             <stop offset="1" stop-color="#1fbf7a" stop-opacity="0"/>
           </linearGradient>
           <radialGradient id="planet" cx="50%" cy="100%" r="62%">
-            <stop offset="0" stop-color="#0a4a4a" stop-opacity=".5"/>
-            <stop offset="0.7" stop-color="#0a4a4a" stop-opacity="0"/>
+            <stop offset="0" stop-color="#0d3a5c" stop-opacity=".5"/>
+            <stop offset="0.7" stop-color="#0d3a5c" stop-opacity="0"/>
           </radialGradient>
           <filter id="arcGlowBig" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="17"/></filter>
           <filter id="arcGlowSm" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
@@ -876,7 +872,7 @@
     </div>
     <div class="hero-city">
       <svg viewBox="0 0 1600 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-        <path fill="#031a1e" d="M0,120 V70 h40 v-18 h26 v18 h30 v-34 h22 v34 h34 v-22 h28 v22 h40 v-48 h20 v48 h30 v-26 h26 v26 h36 v-16 h24 v16 h40 v-40 h22 v40 h32 v-22 h26 v22 h38 v-30 h22 v30 h34 v-18 h26 v18 h42 v-44 h20 v44 h30 v-24 h26 v24 h36 v-16 h24 v16 h40 v-38 h22 v38 h32 v-22 h26 v22 h38 v-30 h22 v30 h34 v-18 h26 v18 h44 v-40 h20 v40 h30 v-24 h26 v24 h36 v-16 h24 v16 h40 v-46 h22 v46 h32 v-22 h26 v22 h38 v-28 h22 v28 h60 V120 Z"/>
+        <path fill="#04121f" d="M0,120 V70 h40 v-18 h26 v18 h30 v-34 h22 v34 h34 v-22 h28 v22 h40 v-48 h20 v48 h30 v-26 h26 v26 h36 v-16 h24 v16 h40 v-40 h22 v40 h32 v-22 h26 v22 h38 v-30 h22 v30 h34 v-18 h26 v18 h42 v-44 h20 v44 h30 v-24 h26 v24 h36 v-16 h24 v16 h40 v-38 h22 v38 h32 v-22 h26 v22 h38 v-30 h22 v30 h34 v-18 h26 v18 h44 v-40 h20 v40 h30 v-24 h26 v24 h36 v-16 h24 v16 h40 v-46 h22 v46 h32 v-22 h26 v22 h38 v-28 h22 v28 h60 V120 Z"/>
       </svg>
     </div>
     <div class="hero-floor"></div>
