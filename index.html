@@ -8,6 +8,16 @@
 <meta property="og:title" content="חינוך פיננסי בעולמות ה-AI — מספר תכנית 60414" />
 <meta property="og:description" content="תכנית חינוך פיננסי חווייתית לבתי ספר — תת-סל מס׳ 60414. סילבוס מלא, מערכי שיעור, מחירון רשמי והזמנה." />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.hasheli.com/" />
+<meta property="og:image" content="https://www.hasheli.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.hasheli.com/assets/og-image.png" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230fa3a8'/%3E%3Cstop offset='1' stop-color='%233ed99a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-size='36' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'%3E%E2%82%AA%3C/text%3E%3C/svg%3E" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Course","name":"חינוך פיננסי בעולמות ה-AI","description":"תכנית חינוך פיננסי חווייתית לבתי ספר — 30 מפגשים, 60 שעות. תכנית תת-סל מאושרת מס׳ 60414 לחט״ב ולחטיבה העליונה.","courseCode":"60414","url":"https://www.hasheli.com/","provider":{"@type":"Person","name":"יהונתן השלי","telephone":"+972-52-3381822","email":"yonibmyguest@gmail.com"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Onsite","courseWorkload":"PT60H"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -85,7 +95,7 @@
   .nav-links{display:flex;align-items:center;gap:2px}
   .nav-links a{padding:8px 11px;border-radius:10px;font-weight:600;font-size:.92rem;color:var(--ink-soft);transition:.2s;white-space:nowrap}
   .nav-links a:hover{color:var(--teal-800);background:var(--bg-2)}
-  .nav-cta .btn-ghost{padding:9px 16px;font-size:.92rem}
+  .nav-cta .btn{padding:9px 16px;font-size:.92rem}
   .btn{
     display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:none;
     font-family:inherit;font-weight:800;font-size:1rem;
@@ -459,7 +469,7 @@
     }
     .nav-links.open{transform:none}
     .nav-links a{padding:13px 12px;border-radius:11px;font-size:1.02rem}
-    .nav-cta .btn-ghost{display:none}
+    .nav-cta .btn{display:none}
     .hamburger{display:block}
   }
   @media(max-width:760px){
@@ -576,9 +586,86 @@
     .lesson .mnum{min-width:44px;height:44px;font-size:.78rem}
     .lesson summary{gap:10px}
   }
+
+  /* ---------- SCROLL PROGRESS BAR ---------- */
+  #pbar{position:fixed;top:0;inset-inline-start:0;height:4px;width:0;z-index:95;background:var(--grad-btn);border-radius:0 0 3px 3px;pointer-events:none}
+
+  /* ---------- HOW IT WORKS (3 steps) ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:38px}
+  .step{position:relative;text-align:center;background:#fff;border-radius:var(--radius);padding:32px 22px 26px;
+    border:1px solid rgba(15,163,168,.14);box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s}
+  .step:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .step .snum{width:58px;height:58px;border-radius:50%;background:var(--grad-btn);color:#053b3f;
+    font-weight:900;font-size:1.5rem;display:grid;place-items:center;margin:0 auto 16px;box-shadow:var(--shadow-sm)}
+  .step h3{font-size:1.15rem;margin-bottom:8px}
+  .step p{color:var(--ink-soft);font-size:.96rem}
+  .step:not(:last-child)::after{content:"←";position:absolute;top:50%;inset-inline-end:-24px;transform:translateY(-50%);
+    color:var(--teal-500);font-size:1.6rem;font-weight:900}
+  @media(max-width:760px){
+    .steps{grid-template-columns:1fr;gap:16px}
+    .step:not(:last-child)::after{content:"↓";inset-inline-end:auto;left:50%;top:auto;bottom:-25px;transform:translateX(-50%)}
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonial{position:relative;max-width:820px;margin:44px auto 0;background:#fff;border-radius:26px;
+    padding:44px 42px 34px;box-shadow:var(--shadow);border:1px solid rgba(15,163,168,.14)}
+  .testimonial .qmark{position:absolute;top:-26px;inset-inline-start:34px;width:54px;height:54px;border-radius:16px;
+    background:var(--grad-btn);color:#053b3f;display:grid;place-items:center;font-size:2.2rem;font-weight:900;
+    box-shadow:var(--shadow-sm);line-height:1;padding-top:12px}
+  .testimonial p.qt{font-size:1.18rem;line-height:1.95;color:var(--ink)}
+  .testimonial .who{display:flex;align-items:center;gap:14px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(15,163,168,.12)}
+  .testimonial .avatar{flex:0 0 auto;width:54px;height:54px;border-radius:50%;background:var(--grad-hero);color:#eafffb;
+    font-weight:900;display:grid;place-items:center;font-size:1.25rem}
+  .testimonial .who b{display:block;font-size:1.05rem}
+  .testimonial .who span{color:var(--ink-soft);font-size:.92rem}
+  .testi-mini{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:820px;margin:20px auto 0}
+  .testi-mini .tm{background:#fff;border:1px solid rgba(15,163,168,.14);border-radius:18px;padding:20px 24px;
+    box-shadow:var(--shadow-sm);color:var(--ink-soft);font-size:.98rem;line-height:1.8}
+  .testi-mini .tm::before{content:"❝";color:var(--teal-500);font-size:1.5rem;font-weight:900;display:block;line-height:1;margin-bottom:6px}
+  .testi-cta{text-align:center;margin-top:26px}
+  @media(max-width:760px){
+    .testimonial{padding:38px 22px 26px}
+    .testimonial p.qt{font-size:1.05rem}
+    .testi-mini{grid-template-columns:1fr}
+  }
+
+  /* ---------- COUNTERS BAND ---------- */
+  .counters{background:var(--grad-hero);color:#eafffb;padding:46px 0;position:relative;overflow:hidden}
+  .counters::before{content:"";position:absolute;inset:0;opacity:.14;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.7) 1.5px, transparent 1.5px);background-size:26px 26px}
+  .counters .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;position:relative}
+  .counters .cnum{display:block;font-size:clamp(2.1rem,4.5vw,3.2rem);font-weight:900;color:#9ef0a8;line-height:1.1}
+  .counters .clbl{font-size:.95rem;color:#d6fff5;font-weight:600}
+  @media(max-width:760px){.counters .wrap{grid-template-columns:1fr 1fr;gap:24px 12px}}
+
+  /* ---------- SIGNED QUOTE (teacher) ---------- */
+  .sig-quote{margin-top:26px;padding:22px 26px;background:#fff;border-inline-start:5px solid var(--teal-500);
+    border-radius:16px;box-shadow:var(--shadow-sm);font-size:1.04rem;color:var(--ink-soft);line-height:1.85}
+  .sig-quote .sig{margin-top:10px;font-weight:800;color:var(--teal-800)}
+
+  /* ---------- STICKY MOBILE CTA BAR ---------- */
+  .stickybar{display:none}
+  @media(max-width:760px){
+    .stickybar{position:fixed;bottom:0;left:0;right:0;z-index:75;display:flex;align-items:center;gap:10px;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+      background:rgba(255,255,255,.96);backdrop-filter:blur(12px);
+      border-top:1px solid rgba(15,163,168,.18);box-shadow:0 -10px 30px -14px rgba(6,62,68,.3)}
+    .stickybar .btn{flex:1;justify-content:center;padding:13px 10px;font-size:.98rem}
+    .stickybar .wa-mini{flex:0 0 auto;width:48px;height:48px;border-radius:13px;background:#25d366;display:grid;place-items:center}
+    .stickybar .wa-mini svg{width:27px;height:27px;fill:#fff}
+    .fab{display:none}
+    body{padding-bottom:72px}
+    .cookie-banner{z-index:85}
+  }
+
+  /* ---------- SECTION BACKGROUND VARIETY ---------- */
+  .band{background-image:radial-gradient(rgba(15,163,168,.10) 1.4px, transparent 1.4px),var(--grad-mint);background-size:24px 24px,auto}
+  #syllabus{background:linear-gradient(180deg,#f3fcfb 0%,#eef6ff 46%,#f3fcfb 100%)}
+  #testimonials{background:linear-gradient(180deg,#ffffff 0%,#f0fbf8 100%)}
 </style>
 </head>
 <body>
+<div id="pbar" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="ic-badge-check" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></symbol><symbol id="ic-book" viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h7v16H6a2 2 0 0 0-2 2z"/><path d="M13 3h5a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2h-5"/></symbol><symbol id="ic-cap" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-4 9 4-9 4-9-4z"/><path d="M7 11v4c0 1.2 2.4 2.6 5 2.6s5-1.4 5-2.6v-4"/><path d="M21 9v5"/></symbol><symbol id="ic-puzzle" viewBox="0 0 24 24" fill="none"><path d="M9 4h2a1.5 1.5 0 1 1 3 0h2a1 1 0 0 1 1 1v2a1.5 1.5 0 1 1 0 3v3a1 1 0 0 1-1 1h-3a1.5 1.5 0 1 0-3 0H5a1 1 0 0 1-1-1v-3a1.5 1.5 0 1 0 0-3V5a1 1 0 0 1 1-1z"/></symbol><symbol id="ic-flag" viewBox="0 0 24 24" fill="none"><path d="M5 21V4"/><path d="M5 4h11l-2 3 2 3H5"/></symbol><symbol id="ic-ai" viewBox="0 0 24 24" fill="none"><rect x="5" y="8" width="14" height="11" rx="2"/><path d="M12 8V4M9 4h6"/><circle cx="9.5" cy="13" r="1"/><circle cx="14.5" cy="13" r="1"/><path d="M2 12v3M22 12v3"/></symbol><symbol id="ic-trend" viewBox="0 0 24 24" fill="none"><path d="M4 16l5-5 3 3 7-7"/><path d="M16 7h4v4"/></symbol><symbol id="ic-bulb" viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.3 1 2.5h6c0-1.2.2-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol><symbol id="ic-target" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="ic-brain" viewBox="0 0 24 24" fill="none"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8V15a3 3 0 0 0 4 2.8"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5.8V15a3 3 0 0 1-4 2.8"/><path d="M12 4v14"/></symbol><symbol id="ic-sprout" viewBox="0 0 24 24" fill="none"><path d="M12 20v-7"/><path d="M12 13c0-3 2-5 6-5 0 4-3 5-6 5z"/><path d="M12 13c0-2.5-2-4-5-4 0 3 2.5 4 5 4z"/></symbol><symbol id="ic-money" viewBox="0 0 24 24" fill="none"><path d="M9.5 3h5l-1.3 2.4h-2.4z"/><path d="M13 5.4C16.5 7 19 10 19 14a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5c0-4 2.5-7 6-8.6"/><path d="M12 9v6M10.4 10.6h2.2a1.3 1.3 0 0 1 0 2.6h-1.2a1.3 1.3 0 0 0 0 2.6h2"/></symbol><symbol id="ic-bars" viewBox="0 0 24 24" fill="none"><path d="M3 20h18"/><line x1="6.5" y1="20" x2="6.5" y2="12"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="17.5" y1="20" x2="17.5" y2="10"/></symbol><symbol id="ic-scale" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M7 20h10"/><path d="M12 6L5 8 2.6 13a3 3 0 0 0 4.8 0L5 8"/><path d="M12 6l7 2 2.4 5a3 3 0 0 1-4.8 0L19 8"/></symbol><symbol id="ic-shield" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="ic-users" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 6a3 3 0 0 1 0 6M21 19a6 6 0 0 0-5-5.9"/></symbol><symbol id="ic-backpack" viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0 1 12 0v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 9a3 3 0 0 1 6 0"/><path d="M9 14h6v4H9z"/></symbol><symbol id="ic-family" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="2.4"/><circle cx="17" cy="7" r="2.4"/><path d="M3 19a4 4 0 0 1 8 0M13 19a4 4 0 0 1 8 0"/><circle cx="12" cy="13" r="1.7"/><path d="M9.6 20a2.4 2.4 0 0 1 4.8 0"/></symbol><symbol id="ic-apple" viewBox="0 0 24 24" fill="none"><path d="M12 8c-2-2-6-1.6-6 3 0 4 3 8 6 8s6-4 6-8c0-4.6-4-5-6-3z"/><path d="M12 8c0-2 1-3.2 3-3.6"/></symbol><symbol id="ic-school" viewBox="0 0 24 24" fill="none"><path d="M3 21h18"/><path d="M5 21V9l7-4 7 4v12"/><path d="M9.5 21v-5h5v5"/><path d="M12 5V3"/></symbol><symbol id="ic-flask" viewBox="0 0 24 24" fill="none"><path d="M9 3h6M10 3v6l-5 8a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-8V3"/><path d="M7.5 15h9"/></symbol><symbol id="ic-presenter" viewBox="0 0 24 24" fill="none"><rect x="3" y="3.5" width="12" height="9" rx="1"/><path d="M9 12.5v3"/><circle cx="18" cy="9" r="2"/><path d="M15 19a3 3 0 0 1 6 0"/></symbol><symbol id="ic-dice" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.1"/><circle cx="15" cy="15" r="1.1"/><circle cx="15" cy="9" r="1.1"/><circle cx="9" cy="15" r="1.1"/></symbol><symbol id="ic-device" viewBox="0 0 24 24" fill="none"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></symbol><symbol id="ic-folders" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v1H3z"/><path d="M3 10h18l-1.2 8a2 2 0 0 1-2 1.6H6.2a2 2 0 0 1-2-1.6z"/></symbol><symbol id="ic-user" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol><symbol id="ic-building" viewBox="0 0 24 24" fill="none"><path d="M3 21h18"/><path d="M5 21V10M9.5 21V10M14.5 21V10M19 21V10"/><path d="M4 10h16"/><path d="M12 3l8 5H4z"/></symbol><symbol id="ic-receipt" viewBox="0 0 24 24" fill="none"><path d="M6 3h12v18l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3L6 21z"/><path d="M9 8h6M9 12h5"/></symbol><symbol id="ic-briefcase" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></symbol><symbol id="ic-clipboard" viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9z"/><path d="M9 11h6M9 15h4"/></symbol><symbol id="ic-hash" viewBox="0 0 24 24" fill="none"><path d="M5 9h14M5 15h14M10 4l-1.6 16M15.6 4L14 20"/></symbol><symbol id="ic-repeat" viewBox="0 0 24 24" fill="none"><path d="M4 9a5 5 0 0 1 5-5h7"/><path d="M14 1l3 3-3 3"/><path d="M20 15a5 5 0 0 1-5 5H8"/><path d="M10 23l-3-3 3-3"/></symbol><symbol id="ic-laptop" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="11" rx="1"/><path d="M2 20h20"/></symbol><symbol id="ic-globe" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15 0 18M12 3c-2.5 2.6-2.5 15 0 18"/></symbol><symbol id="ic-map" viewBox="0 0 24 24" fill="none"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol><symbol id="ic-alert" viewBox="0 0 24 24" fill="none"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></symbol><symbol id="ic-tag" viewBox="0 0 24 24" fill="none"><path d="M3 12l9-9 8 8-9 9z"/><circle cx="8.5" cy="8.5" r="1.3"/></symbol><symbol id="ic-cart" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M3 4h2l2.4 12h10L20 8H6"/></symbol><symbol id="ic-star" viewBox="0 0 24 24" fill="none"><path d="M12 4l2.3 4.7 5.2.8-3.8 3.6.9 5.1L12 16.8l-4.6 2.2.9-5.1-3.8-3.6 5.2-.8z"/></symbol><symbol id="ic-mail" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></symbol><symbol id="ic-phone" viewBox="0 0 24 24" fill="none"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L19 17l-1 3a16 16 0 0 1-13-13z"/></symbol><symbol id="ic-chat" viewBox="0 0 24 24" fill="none"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-4 4v-4H6a2 2 0 0 1-2-2z"/></symbol><symbol id="ic-help" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 4 1.6c0 1.6-2 2-2 3.4"/><path d="M12 17h.01"/></symbol><symbol id="ic-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6"/></symbol></defs></svg>
 
 <!-- ============ NAV ============ -->
@@ -599,7 +686,7 @@
       <a href="#order">מחירון והזמנה</a>
     </nav>
     <div class="nav-cta">
-      <a href="#order" class="btn btn-ghost">הזמינו מפגש</a>
+      <a href="#order" class="btn btn-primary">הזמינו מפגש</a>
       <button class="hamburger" id="burger" aria-label="תפריט"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -811,6 +898,7 @@
     <span><span class="dot"></span>מפותח על ידי מנהל ומורה עם <b>15+ שנות ניסיון</b></span>
     <span><span class="dot"></span>פרונטלי ומקוון · רגיל ומיוחד · כל המחוזות</span>
     <span><span class="dot"></span>מבנה <b>מודולרי</b> — קורס מלא, סדנה או הרצאה</span>
+    <span><span class="dot"></span><a href="#testimonials" style="font-weight:700;color:var(--teal-700);text-decoration:underline">מומלץ על ידי מנהלי בתי ספר ←</a></span>
   </div>
 </div>
 
@@ -931,8 +1019,53 @@
           <div class="cred"><span class="ci"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-ai"/></svg></span><div><b>פיתח את קורס ה-AI הרשמי הראשון</b><span>באישור משרד העבודה · הועבר גם לחיילים משוחררים</span></div></div>
           <div class="cred"><span class="ci"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-building"/></svg></span><div><b>מנהל אקדמי</b><span>קורס מטמיעי מערכות AI · אוניברסיטת אריאל · יזמות במכללת פסגות</span></div></div>
         </div>
+        <blockquote class="sig-quote reveal">
+          "אני מאמין שביטחון כלכלי הוא מיומנות שנבנית — לא מזל. המשימה שלי היא שכל תלמיד ותלמידה ייצאו מהתכנית עם הכלים, האומץ והסקרנות לנהל את הכסף שלהם בעצמם."
+          <div class="sig">— יהונתן השלי</div>
+        </blockquote>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section-pad" id="testimonials">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-star"/></svg> ממליצים עלינו</span>
+      <h2 class="title">מה אומרים בבתי הספר</h2>
+    </div>
+
+    <div class="testimonial reveal">
+      <span class="qmark" aria-hidden="true">❝</span>
+      <p class="qt">"יוני הפגין ידע מקצועי רחב, גישה חינוכית רגישה ויכולת יוצאת דופן לרתום את התלמידים לחשיבה עצמאית, אחראית וערכית בנושאים כלכליים. אנו רואים ביוני שותף חינוכי אמיתי, וממליצים עליו בחום לכל מוסד חינוכי השואף לקדם למידה חדשנית, רלוונטית ובעלת השפעה בתחום החינוך הפיננסי."</p>
+      <div class="who">
+        <span class="avatar" aria-hidden="true">ע</span>
+        <div>
+          <b>עאיישה חאג' יחיא</b>
+          <span>מנהלת בית הספר "בית ינאי" · על-יסודי</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-mini reveal">
+      <div class="tm">"הסדנאות זכו להתלהבות רבה מצד התלמידים וצוות ההוראה כאחד."</div>
+      <div class="tm">"הובילו לשיח משמעותי ומעמיק על ניהול כספים, תכנון עתידי וקבלת החלטות נבונה."</div>
+    </div>
+
+    <div class="testi-cta reveal">
+      <a href="assets/hamlatsa-beit-yanai.pdf" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-clipboard"/></svg> לצפייה במכתב ההמלצה המלא</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTERS ============ -->
+<section class="counters" aria-label="נתוני התכנית במספרים">
+  <div class="wrap">
+    <div><span class="cnum" data-n="30">0</span><span class="clbl">מפגשים בתכנית המלאה</span></div>
+    <div><span class="cnum" data-n="60">0</span><span class="clbl">שעות לימוד</span></div>
+    <div><span class="cnum" data-n="16" data-suf="+">0</span><span class="clbl">יחידות תוכן + פרויקט גמר</span></div>
+    <div><span class="cnum" data-n="80" data-suf="%+">0</span><span class="clbl">השתתפות במפגשים</span></div>
   </div>
 </section>
 
@@ -981,6 +1114,34 @@
 </section>
 
 <!-- ============ PRICING / ORDER ============ -->
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section-pad" id="howto" style="background:#fff">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-repeat"/></svg> פשוט להתחיל</span>
+      <h2 class="title">מזמינים בשלושה צעדים פשוטים</h2>
+      <p class="lead mx-auto mt16">מהפנייה הראשונה ועד המפגש הראשון בכיתה — אנחנו מלווים אתכם בכל שלב.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="snum">1</div>
+        <h3>יוצרים קשר</h3>
+        <p>בטופס, בטלפון או בוואטסאפ — ספרו לנו על בית הספר, השכבה והצרכים שלכם.</p>
+      </div>
+      <div class="step">
+        <div class="snum">2</div>
+        <h3>מתאימים תכנית</h3>
+        <p>בונים יחד את ההיקף המתאים — קורס מלא, מודול או הרצאה — כולל התאמה מלאה לתקציב תת-הסל (מס׳ 60414).</p>
+      </div>
+      <div class="step">
+        <div class="snum">3</div>
+        <h3>מתחילים ללמד</h3>
+        <p>מערכי שיעור מוכנים, תיאום מול הצוות — והתלמידים יוצאים למסע פיננסי חווייתי.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="pricing section-pad" id="order">
   <div class="wrap">
     <div class="center reveal">
@@ -999,7 +1160,7 @@
           <li>מתאים לאירוע, יום שיא או טעימה</li>
           <li>גמיש לכיתה או לשכבה</li>
         </ul>
-        <a href="#contact" class="btn btn-white">לתיאום מפגש</a>
+        <a href="#contact" class="btn btn-white" data-format="הרצאה / מפגש בודד">לתיאום מפגש</a>
       </div>
       <div class="price-card feat reveal">
         <span class="ribbon">הכי פופולרי <svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-star"/></svg></span>
@@ -1012,7 +1173,7 @@
           <li>תכנית תת-סל מאושרת · מס׳ 60414</li>
           <li>הצגת פרויקטים מול מנהלים ומורים</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">קבלו הצעה לבית הספר</a>
+        <a href="#contact" class="btn btn-primary" data-format="תכנית מלאה (30 מפגשים)">קבלו הצעה לבית הספר</a>
       </div>
       <div class="price-card reveal">
         <h3>סדנה / מודול נבחר</h3>
@@ -1023,7 +1184,7 @@
           <li>שילוב בתכנית קיימת</li>
           <li>אפשרות להשתלמות צוות מורים</li>
         </ul>
-        <a href="#contact" class="btn btn-white">לתיאום סדנה</a>
+        <a href="#contact" class="btn btn-white" data-format="מודול / יחידה נבחרת">לתיאום סדנה</a>
       </div>
     </div>
 
@@ -1173,6 +1334,12 @@
     </div>
   </div>
 </footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="stickybar" aria-label="פעולות מהירות">
+  <a href="#order" class="btn btn-primary">הזמינו מפגש ←</a>
+  <a class="wa-mini" href="https://wa.me/972523381822?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%95%D7%A0%D7%AA%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%AA%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A%20%D7%94%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.448h.006c6.585 0 11.946-5.36 11.949-11.945a11.88 11.88 0 00-3.48-8.443z"/></svg></a>
+</div>
 
 <!-- ============ FLOATING ACTIONS ============ -->
 <div class="fab">
@@ -1340,6 +1507,51 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
 
 document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ---------- Scroll progress bar ---------- */
+(function(){
+  var pb=document.getElementById('pbar');
+  if(!pb) return;
+  addEventListener('scroll',function(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    pb.style.width=(max>0 ? (h.scrollTop/max*100) : 0)+'%';
+  },{passive:true});
+})();
+
+/* ---------- Animated counters ---------- */
+(function(){
+  var els=document.querySelectorAll('.cnum');
+  if(!els.length) return;
+  var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function final(el){el.textContent=el.dataset.n+(el.dataset.suf||'');}
+  if(reduced){els.forEach(final);return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      io.unobserve(e.target);
+      var el=e.target,target=+el.dataset.n,suf=el.dataset.suf||'';
+      var t0=performance.now(),dur=1500;
+      (function tick(t){
+        var p=Math.min(1,(t-t0)/dur);
+        el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+suf;
+        if(p<1) requestAnimationFrame(tick);
+      })(t0);
+    });
+  },{threshold:.5});
+  els.forEach(function(el){io.observe(el);});
+})();
+
+/* ---------- Package deep-link: preselect format in the form ---------- */
+document.querySelectorAll('[data-format]').forEach(function(a){
+  a.addEventListener('click',function(){
+    var s=document.getElementById('format');
+    if(!s) return;
+    for(var i=0;i<s.options.length;i++){
+      if(s.options[i].text===a.dataset.format){s.selectedIndex=i;break;}
+    }
+  });
+});
 
 /* ---------- Cookie consent ---------- */
 (function(){
