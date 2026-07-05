@@ -114,7 +114,8 @@
 
   /* ---------- HERO (dark cinematic) ---------- */
   .hero{position:relative;color:#eaf4ff;overflow:hidden;min-height:92vh;display:grid;align-items:center;
-    background:radial-gradient(85% 75% at 50% 26%, #12314f 0%, #0a2036 52%, #04101f 100%)}
+    --aur:#13FFAA;
+    background:radial-gradient(125% 125% at 50% 0%, #020617 50%, var(--aur))}
   .hero .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.22;pointer-events:none;z-index:1;mix-blend-mode:screen}
   .hero .b1{width:460px;height:460px;background:#27ae60;top:-180px;left:-140px;animation:float1 14s ease-in-out infinite}
   .hero .b2{width:400px;height:400px;background:#23b1c4;bottom:-200px;right:-120px;animation:float2 17s ease-in-out infinite}
@@ -125,7 +126,7 @@
   /* ---------- HERO depth scene (CSS+SVG faux-3D) ---------- */
   .hero-scene{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
   .hero-halo{position:absolute;inset:0;mix-blend-mode:screen;transform:translate(var(--gx,0),var(--gy,0));transition:transform .3s ease-out;
-    background:radial-gradient(42% 34% at 50% 12%, rgba(120,225,205,.45), rgba(35,177,196,.16) 45%, transparent 72%)}
+    background:radial-gradient(42% 34% at 50% 12%, color-mix(in srgb, var(--aur) 40%, transparent), color-mix(in srgb, var(--aur) 14%, transparent) 45%, transparent 72%)}
   .hero-stars{position:absolute;inset:0;opacity:.8;transform:translate(var(--sx,0),var(--sy,0));transition:transform .3s ease-out;
     background-image:
       radial-gradient(1.6px 1.6px at 12% 22%, rgba(255,255,255,.9), transparent),
@@ -146,8 +147,8 @@
   .hero-floor{position:absolute;left:50%;bottom:0;width:320%;height:42%;
     transform:translateX(-50%) perspective(300px) rotateX(73deg);transform-origin:bottom center;
     background-image:
-      linear-gradient(to right, rgba(62,224,192,.32) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(62,224,192,.32) 1px, transparent 1px);
+      linear-gradient(to right, color-mix(in srgb, var(--aur) 32%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--aur) 32%, transparent) 1px, transparent 1px);
     background-size:60px 60px;
     -webkit-mask-image:linear-gradient(to top,#000 2%, transparent 78%);
     mask-image:linear-gradient(to top,#000 2%, transparent 78%);
@@ -682,8 +683,11 @@
   .hero2-sub{margin-top:16px;font-size:clamp(1rem,1.8vw,1.2rem);color:#bfe9e0;line-height:1.8;max-width:62ch}
   .hero2 .hero-actions{margin-top:30px;justify-content:center}
   .btn-xl{padding:17px 32px;font-size:1.12rem;border-radius:16px}
-  .btn-glass{background:rgba(255,255,255,.1);color:#eafffb;border:1.5px solid rgba(255,255,255,.32);backdrop-filter:blur(8px)}
-  .btn-glass:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+  .btn-glass{background:rgba(2,6,23,.25);color:#eafffb;backdrop-filter:blur(8px);
+    border:1.5px solid var(--aur,rgba(255,255,255,.32));
+    box-shadow:0 4px 24px color-mix(in srgb, var(--aur,#13FFAA) 45%, transparent);
+    transition:transform .2s,background .2s}
+  .btn-glass:hover{background:rgba(2,6,23,.5);transform:translateY(-2px)}
   .hero2-trust{margin-top:22px;color:#bfe9e0;font-size:.96rem;display:inline-flex;align-items:center;gap:10px;transition:color .2s}
   .hero2-trust:hover{color:#eafffb}
   .stars{color:#ffd166;letter-spacing:3px;font-size:1.05rem}
@@ -1585,6 +1589,32 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
 
 document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ---------- Aurora background (colors drift through the palette) ---------- */
+(function(){
+  var hero=document.querySelector('.hero');
+  if(!hero) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){hero.style.setProperty('--aur','#1E67C6');return;}
+  var C=[[19,255,170],[30,103,198],[206,132,207],[221,51,92]]; /* #13FFAA #1E67C6 #CE84CF #DD335C */
+  var D=10000, n=C.length-1, last=0;
+  function ease(t){return t<.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2;}
+  function tick(now){
+    if(now-last>66){ /* ~15fps is plenty for a slow drift */
+      last=now;
+      var cyc=(now%(2*D))/D;          /* 0..2 */
+      var t=cyc<1?cyc:2-cyc;          /* mirror: 0→1→0 */
+      var seg=Math.min(Math.floor(t*n), n-1);
+      var f=ease(t*n-seg);
+      var a=C[seg], b=C[seg+1];
+      hero.style.setProperty('--aur','rgb('+
+        Math.round(a[0]+(b[0]-a[0])*f)+','+
+        Math.round(a[1]+(b[1]-a[1])*f)+','+
+        Math.round(a[2]+(b[2]-a[2])*f)+')');
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
 
 /* ---------- Spatial 3D tilt ---------- */
 (function(){
