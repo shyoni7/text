@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1330 455" role="img" aria-label="YHS — חינוך פיננסי בעולמות ה-AI">
+  <style>
+    .mono{font-family:Georgia,'Times New Roman',serif;font-weight:700;fill:#1e3a5c}
+    .tag{font-family:'Heebo','Rubik',Arial,sans-serif;font-weight:700;fill:#1e3a5c}
+  </style>
+  <!-- Y -->
+  <text class="mono" x="600" y="335" font-size="400">Y</text>
+  <!-- teal crossbar bridging Y and H -->
+  <rect x="832" y="207" width="88" height="36" fill="#23b1c4"/>
+  <!-- green crescent under S -->
+  <path d="M1078,368 A125,115 0 0 0 1292,312 A140,138 0 0 1 1058,400 Z" fill="#27ae60"/>
+  <!-- H -->
+  <text class="mono" x="912" y="355" font-size="300">H</text>
+  <!-- S -->
+  <text class="mono" x="1100" y="362" font-size="330">S</text>
+  <!-- Hebrew tagline -->
+  <text class="tag" x="585" y="293" font-size="44" direction="rtl" text-anchor="start">חינוך פיננסי בעולמות ה-AI</text>
+</svg>
