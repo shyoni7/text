@@ -800,8 +800,8 @@
   @media(max-width:980px){.testi-grid{grid-template-columns:1fr;max-width:560px;margin-inline:auto}}
 
   /* ---------- HERO 3.0: video hero (D4) + LIVE panel (D3) ---------- */
-  .hero3-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;width:100%}
-  .hero3-text{display:flex;flex-direction:column;align-items:flex-start;text-align:start}
+  .hero3-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;width:100%;max-width:1280px;margin-inline:auto}
+  .hero3-text{display:flex;flex-direction:column;align-items:flex-start;text-align:start;padding-inline-start:26px}
   .hero3-text .hero2-badges{justify-content:flex-start;margin-bottom:22px}
   .hero3-text h1{font-size:clamp(2.3rem,4.8vw,3.7rem)}
   .hero3-text .hero2-sub{max-width:54ch}
@@ -831,7 +831,7 @@
   @media(max-width:980px){
     .hero3-grid{grid-template-columns:1fr;gap:32px}
     .vframe{order:-1;width:min(560px,100%);margin:0 auto}
-    .hero3-text{align-items:center;text-align:center}
+    .hero3-text{align-items:center;text-align:center;padding-inline-start:0}
     .hero3-text .hero2-badges{justify-content:center}
     .hero3-text .hero-actions{justify-content:center}
     .hero .coin{display:none} /* stacked layout — coins collide with text */
@@ -907,9 +907,7 @@
       <i style="left:32%;bottom:52%;width:5px;height:5px;animation-duration:17s;animation-delay:1s"></i>
       <i style="left:78%;bottom:56%;width:3px;height:3px;animation-duration:14s;animation-delay:6s"></i>
       <span class="coin" style="left:7%;top:24%;width:58px;height:58px;font-size:1.5rem;--cd:8s">₪</span>
-      <span class="coin" style="left:88%;top:32%;width:44px;height:44px;font-size:1.15rem;--cd:10s;--cdel:1.2s">₪</span>
       <span class="coin blur hide-m" style="left:16%;top:58%;width:30px;height:30px;font-size:.8rem;--cd:12s;--cdel:2s">₪</span>
-      <span class="coin blur hide-m" style="left:80%;top:64%;width:34px;height:34px;font-size:.9rem;--cd:11s;--cdel:.6s">₪</span>
       <span class="coin hide-m" style="left:24%;top:12%;width:26px;height:26px;font-size:.7rem;--cd:9s;--cdel:3s">₪</span>
     </div>
   </div>
