@@ -836,6 +836,21 @@
     .hero3-text .hero-actions{justify-content:center}
     .hero .coin{display:none} /* stacked layout — coins collide with text */
   }
+
+  /* ---------- HERO bottom: 3 symmetric principal cards ---------- */
+  .hero-testi{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;width:100%;max-width:1280px;margin:50px auto 0}
+  .ht{display:flex;flex-direction:column;gap:10px;text-align:start;
+    background:rgba(10,28,48,.55);border:1px solid rgba(108,240,214,.25);border-radius:18px;
+    padding:20px 22px;backdrop-filter:blur(12px);
+    box-shadow:0 26px 50px -28px rgba(0,0,0,.7)}
+  .ht:hover{border-color:rgba(108,240,214,.55);box-shadow:0 32px 60px -26px rgba(0,0,0,.85)}
+  .ht-stars{color:var(--gold);letter-spacing:2px;font-size:.88rem;text-shadow:0 0 8px rgba(255,209,102,.35)}
+  .ht p{flex:1;color:#dbeeff;font-size:.95rem;line-height:1.75;margin:0}
+  .ht-who b{display:block;color:#eafffb;font-size:.92rem;font-weight:800}
+  .ht-who span{color:#9fc6d9;font-size:.8rem}
+  @media(max-width:980px){
+    .hero-testi{grid-template-columns:1fr;gap:14px;margin-top:36px;max-width:560px}
+  }
 </style>
 </head>
 <body>
@@ -944,43 +959,22 @@
       </div>
     </div>
 
-    <div class="dash hud tilt" aria-hidden="true">
-      <span class="hc tl"></span><span class="hc tr"></span><span class="hc bl"></span><span class="hc br"></span>
-      <div class="dash-head">
-        <span class="dots"><i></i><i></i><i></i></span>
-        <span class="dash-tag">YHS · AI FIN LAB</span>
-        <span class="live"><i></i> תצוגה חיה מהמערכת</span>
-      </div>
-      <div class="dash-body">
-        <div class="dash-chart">
-          <div class="dc-top"><b>תיק ההשקעות הווירטואלי של הכיתה</b><span class="up">‎+12.4%</span></div>
-          <svg viewBox="0 0 520 150" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="dArea" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#34dcc9" stop-opacity=".4"/>
-                <stop offset="1" stop-color="#34dcc9" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <path class="darea" d="M0,120 L40,112 L80,118 L120,98 L160,104 L200,84 L240,92 L280,70 L320,78 L360,56 L400,62 L440,40 L480,46 L520,26 L520,150 L0,150 Z" fill="url(#dArea)"/>
-            <polyline class="dline" points="0,120 40,112 80,118 120,98 160,104 200,84 240,92 280,70 320,78 360,56 400,62 440,40 480,46 520,26"/>
-            <circle class="dtip" cx="520" cy="26" r="4.5" fill="#9ef0a8">
-              <animate attributeName="r" values="4.5;7;4.5" dur="2s" repeatCount="indefinite"/>
-            </circle>
-          </svg>
-        </div>
-        <div class="dash-side">
-          <div class="ds-student">
-            <span class="avatar" aria-hidden="true">ד</span>
-            <div class="ds-who"><b>דן רוזן</b><span>תלמיד כיתה י"א · משקיע פעיל</span></div>
-          </div>
-          <div class="ds-tiles">
-            <div class="t"><b class="cnum" data-n="92">0</b><small>ציון ידע פיננסי</small></div>
-            <div class="t"><b class="cnum" data-n="87" data-suf="%">0</b><small>השלמת משימות</small></div>
-            <div class="t"><b class="cnum" data-n="12">0</b><small>ימי רצף למידה</small></div>
-            <div class="t"><b>#3</b><small>דירוג בכיתה</small></div>
-          </div>
-        </div>
-      </div>
+    <div class="hero-testi">
+      <a class="ht tilt" href="#testimonials">
+        <span class="ht-stars" aria-hidden="true">★★★★★</span>
+        <p>"יכולת יוצאת דופן לרתום את התלמידים — ממליצים עליו בחום לכל מוסד חינוכי."</p>
+        <div class="ht-who"><b>עאיישה חאג' יחיא</b><span>מנהלת ביה"ס "בית ינאי"</span></div>
+      </a>
+      <a class="ht tilt" href="#testimonials">
+        <span class="ht-stars" aria-hidden="true">★★★★★</span>
+        <p>"מקצועיות גבוהה, יכולת הנחיה מעולה והתאמה מדויקת לקהל היעד."</p>
+        <div class="ht-who"><b>מאיה אור-עובד</b><span>מנהלת חטיבת נעורים "היובל", רמת ישי</span></div>
+      </a>
+      <a class="ht tilt" href="#testimonials">
+        <span class="ht-stars" aria-hidden="true">★★★★★</span>
+        <p>"התכנית השאירה חותם משמעותי — ממליצים עליו בלב שלם."</p>
+        <div class="ht-who"><b>ד"ר דקלה מן-ויצמן</b><span>מנהלת ביה"ס "בית אקשטיין", גן שמואל</span></div>
+      </a>
     </div>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
